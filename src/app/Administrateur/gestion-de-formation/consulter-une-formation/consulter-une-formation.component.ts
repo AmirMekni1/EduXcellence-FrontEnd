@@ -10,10 +10,10 @@ import { EvaluationComponent } from '../evaluation/evaluation.component';
 export interface UserData {
   id: string;
   name: string;
-  progress: string;
   fruit: string;
-  Date_du_début : string;
-  Date_de_fin : string;
+  datededebut: string;
+  datedefin : string;
+  
 }
 
 /** Constants used to fill up our data base. */
@@ -73,7 +73,7 @@ openDialog2() {
  }
    
  
-   displayedColumns: string[] = ['id', 'name', 'progress', 'option', 'Date du début', 'Date de la'];
+   displayedColumns: string[] = ['id', 'name' ,'datededebut','datedefin', 'option'];
    dataSource: MatTableDataSource<UserData>;
  
    @ViewChild(MatPaginator)
@@ -128,10 +128,9 @@ openDialog2() {
    return {
      id: id.toString(),
      name: name,
-     progress: Math.round(Math.random() * 100).toString(),
      fruit: FRUITS[Math.round(Math.random() * (FRUITS.length - 1))],
-     Date_du_début : name,
-    Date_de_fin : name,
+    datededebut : name,
+    datedefin : name,
    };
  
  

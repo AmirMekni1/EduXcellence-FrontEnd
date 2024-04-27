@@ -14,6 +14,7 @@ export interface UserData {
   name: string;
   progress: string;
   fruit: string;
+  formateur_affecté:string
 }
 
 /** Constants used to fill up our data base. */
@@ -74,7 +75,7 @@ export class ConsulterLesComptesDesParticipantsComponent {
        });
    }
 
-     displayedColumns: string[] = ['id', 'name', 'progress', 'option'];
+     displayedColumns: string[] = ['id', 'name', 'formateur_affecté','progress', 'option'];
      dataSource: MatTableDataSource<UserData>;
    
      @ViewChild(MatPaginator)
@@ -132,6 +133,7 @@ export class ConsulterLesComptesDesParticipantsComponent {
        name: name,
        progress: Math.round(Math.random() * 100).toString(),
        fruit: FRUITS[Math.round(Math.random() * (FRUITS.length - 1))],
+       formateur_affecté:name
      };
    
    

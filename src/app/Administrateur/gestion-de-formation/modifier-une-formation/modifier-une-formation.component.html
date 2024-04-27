@@ -1,4 +1,4 @@
-<h2 mat-dialog-title style="margin: 0px auto;">Modification le cours</h2>
+<h2 mat-dialog-title style="margin: 0px auto;">Modifier une formation</h2>
 <mat-dialog-content class="mat-typography">
   
   <form class="example-form" style="display: block;">
@@ -7,23 +7,13 @@
   <mat-label>Entrer Nom De theme</mat-label>
   <input type="text" matInput [formControl]="inputFormControl1" [errorStateMatcher]="matcher"
          placeholder="xx-xxx-xxx">
-  <mat-hint>Errors appear instantly!</mat-hint>
+  
   @if (inputFormControl1.hasError('required')) {
     <mat-error>Nom De theme <strong>Obligatoire</strong></mat-error>
   }
   
 </mat-form-field>
-<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-<mat-form-field class="example-full-width" style="width: 500px; border-radius: 50%; display: block; margin: 0 auto;">
-  <mat-label>Entrer Niveau De Cours</mat-label>
-  <input type="text" matInput [formControl]="inputFormControl2" [errorStateMatcher]="matcher"
-         placeholder="xx-xxx-xxx">
-  <mat-hint>Errors appear instantly!</mat-hint>
-  @if (inputFormControl2.hasError('required')) {
-    <mat-error>Niveau De Cours <strong>Obligatoire</strong></mat-error>
-  }
-  
-</mat-form-field>
+
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <mat-form-field style="width: 500px; border-radius: 50%; display: block; margin: 0 auto;">
   <mat-label>Choose a date de debut</mat-label>
@@ -45,23 +35,8 @@
   @if (inputFormControl4.hasError('required')) {
     <mat-error>date de fin <strong>Obligatoire</strong></mat-error>
   }
-</mat-form-field>
-<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------->     
-<br>          
-<h3>Programme :</h3>      
-<div class="card flex justify-content-center" >
-  <p-fileUpload name="myfile[]" url="https://www.primefaces.org/cdn/api/upload.php" [multiple]="true" accept="application/pdf" maxFileSize="1000000000">
-      <ng-template pTemplate="toolbar">
-          <div class="py-3">Upload 3 Files</div>
-      </ng-template>
-      <ng-template let-file pTemplate="file">
-          <div>Custom UI to display a file</div>
-      </ng-template>
-      <ng-template pTemplate="content" let-files>
-          <div>Additional content.</div>
-      </ng-template>
-  </p-fileUpload>
-</div>
+</mat-form-field>     
+
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
           

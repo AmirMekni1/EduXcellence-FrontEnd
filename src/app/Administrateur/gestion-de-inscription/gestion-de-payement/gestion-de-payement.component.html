@@ -4,12 +4,21 @@
 <form class="example-form" style="display: block;">
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<mat-form-field class="example-full-width" style="width: 500px; border-radius: 50%; display: block; margin: 0 auto;">
+  <mat-label>Entrer Nom De theme</mat-label>
+  <input type="text" matInput [formControl]="inputFormControl1" [errorStateMatcher]="matcher"
+         placeholder="xx-xxx-xxx">
+  
+  @if (inputFormControl1.hasError('required')) {
+    <mat-error>Nom De theme <strong>Obligatoire</strong></mat-error>
+  }
+  
+</mat-form-field>
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
-<h3>Prix :</h3>
 <mat-form-field style="width: 500px; border-radius: 50%; display: block; margin: 0 auto;">
-    <mat-label>xxxxx</mat-label>
-    <input matInput [formControl]="inputFormControl1" [errorStateMatcher]="matcher">
+    <mat-label>Prix</mat-label>
+    <input matInput [formControl]="inputFormControl1" [errorStateMatcher]="matcher" >
     @if (!inputFormControl1.hasError('required')&& inputFormControl1.hasError('missingDigit')) {
       <mat-error>Prix doit contenir des <strong>chiffre</strong></mat-error>
     }
@@ -17,9 +26,9 @@
       <mat-error>Prix <strong>Obligatoire</strong></mat-error>
     }
   </mat-form-field>
-  <h3>Etat de paiement :</h3>
+
   <mat-form-field style="width: 500px; border-radius: 50%; display: block; margin: 0 auto;">
-    <mat-label>Select</mat-label>
+    <mat-label>Etat de paiement</mat-label>
     <mat-select >
       <mat-option value="one">Payé</mat-option>
       <mat-option value="two">non payé</mat-option>
