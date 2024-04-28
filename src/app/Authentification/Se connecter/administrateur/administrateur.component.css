@@ -22,13 +22,13 @@
   }
   .home-image {
     width: 200px;
-    margin: var(--dl-space-space-oneandhalfunits);
+    margin: 10px auto 0px auto;
     object-fit: cover;
     border-color: var(--dl-color-gray-black);
     border-style: hidden;
     border-width: 1px;
     border-radius: 50%;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
    
   }
   .home-container02 {
@@ -37,7 +37,7 @@
     display: flex;
     position: relative;
     align-items: center;
-    margin-bottom: 72px;
+    margin-bottom: 50px;
     flex-direction: column;
     justify-content: flex-start;
   }
@@ -163,7 +163,6 @@
     -o-border-radius: 20px;
   }
   .home-text {
-    margin: 20px;
     align-self: flex-start;
     text-align: center;
     padding: 50px;
@@ -177,6 +176,7 @@
     font-style: normal;
     font-variant: normal;
     text-transform: none;
+    font: normal normal 16px/3 "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   }
   .home-button1 {
     margin: 20px;
