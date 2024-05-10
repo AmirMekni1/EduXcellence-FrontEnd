@@ -16,6 +16,7 @@
           ><input
             type="text"
             placeholder="ID"
+            [(ngModel)]="email"
             class="home-textinput input" /></div></div
       ><div class="home-container06"
         ><div class="home-container07"
@@ -27,8 +28,9 @@
           ><input
             type="text"
             placeholder="Mot de passe"
+            [(ngModel)]="motdepasse"
             class="home-textinput1 input" /></div></div
-      ><button type="button" class="home-button button" style="">Connexion</button></div
+      ><button type="button" class="home-button button" (click)="connexion()" style="">Connexion</button></div
     ><div class="home-container09"
       ><span class="home-text"
         >EduXcellence est une plateforme de formation en ligne de haute qualité

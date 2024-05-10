@@ -10,6 +10,7 @@ import { strongPasswordValidator } from '../../gestion-de-formateurs/modifier-fo
 })
 export class GestionDePayementComponent {
 
+  panelOpenState = false;
   hide = true;
 
   inputFormControl1 = new FormControl('',[Validators.required,strongPasswordValidator()]);

@@ -46,7 +46,7 @@ import { GestionDePayementComponent } from '../gestion-de-inscription/gestion-de
 import { MatSelectModule } from '@angular/material/select';
 import { EvaluationComponent } from '../gestion-de-formation/evaluation/evaluation.component';
 
-
+import {MatExpansionModule} from '@angular/material/expansion';
 
 
 @NgModule({
@@ -87,11 +87,8 @@ import { EvaluationComponent } from '../gestion-de-formation/evaluation/evaluati
     MatDialogModule,
     ReactiveFormsModule,
     FileUploadModule,
-    MatSelectModule
-    
-
-
-
+    MatSelectModule,
+    MatExpansionModule,
   ],providers: [
     provideNativeDateAdapter()
   ]

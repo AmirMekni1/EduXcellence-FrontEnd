@@ -7,6 +7,7 @@ import { FormateurSComponent } from '../Se connecter/formateur-s/formateur-s.com
 import { ParticipantSComponent } from '../Se connecter/participant-s/participant-s.component';
 import { ParticipantIComponent } from '../Inscription/participant-i/participant-i.component';
 import { UtilisateurComponent } from '../Se connecter/utilisateur/utilisateur.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,8 @@ import { UtilisateurComponent } from '../Se connecter/utilisateur/utilisateur.co
   imports: [
     CommonModule,
     ModuleAuthentificationRoutingModule,
+    FormsModule ,
+    
     
   ]
 })

@@ -21,6 +21,7 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogActions, MatDialogClose, MatDialogContent, MatDialogTitle } from '@angular/material/dialog';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -59,6 +60,8 @@ import { MatDialogActions, MatDialogClose, MatDialogContent, MatDialogTitle } fr
     MatDialogContent,
     MatDialogActions,
     MatDialogClose,
+    HttpClientModule,
+     
   
   ],
   providers: [
