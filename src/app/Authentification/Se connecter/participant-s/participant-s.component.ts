@@ -8,6 +8,12 @@ import {  Router } from '@angular/router';
   styleUrl: './participant-s.component.css'
 })
 export class ParticipantSComponent {
+messagealert: any;
+messageerror: any;
+closeAlert() {
+throw new Error('Method not implemented.');
+}
+messagesuccess: any;
 
   constructor( private _service:ServiceAuthentificationService,private router:Router){
 

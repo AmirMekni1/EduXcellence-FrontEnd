@@ -11,7 +11,7 @@
                     <div class="menu"></div>
                     <div class="menu"></div>
                 </label>
-                <div class="nav-container">
+                <div class="nav-container" style="display: inline-block;">
                     <ul class="nav-tabs">
                         <li class="nav-tab">Home</li>
                         <li class="nav-tab">Products</li>
@@ -19,6 +19,8 @@
                         <li class="nav-tab">FAQ</li>
                         <li class="nav-tab">Contact</li>
                         <li class="nav-tab">Careers</li>
+                        <button *ngIf="!token" type="button" class="home-button button" routerLink="/Authentification/EduXcellence"><span>Se Connecter</span></button>
+                        <button *ngIf="token" type="button" class="home-button button" style="width:1080px ; margin-left: 53.6%;"><span (click)="SeDeconnecter()">Se Deconnecter</span></button>
                     </ul>
                 </div>
             </nav>
