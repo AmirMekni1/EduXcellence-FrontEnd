@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -25,11 +26,18 @@ export class ServiceAuthentificationService {
   }
 
   RecupererToken(){
-    if(localStorage.getItem("Token")){
+    if(localStorage.getItem("token")){
       return "";
     }else{
-      return localStorage.getItem("Token");
+      return localStorage.getItem("token");
     }
+  }
+
+  private dataSource = new BehaviorSubject(localStorage.getItem("token"));
+  data$ = this.dataSource.asObservable();
+
+  changeData(newData: any) {
+    this.dataSource.next(newData);
   }
   
 }

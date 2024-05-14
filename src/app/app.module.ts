@@ -22,6 +22,8 @@ import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogActions, MatDialogClose, MatDialogContent, MatDialogTitle } from '@angular/material/dialog';
 import { HttpClientModule } from '@angular/common/http';
+import { AProposComponent } from './Éléments supplémentaires/a-propos/a-propos.component';
+import { ContactComponent } from './Éléments supplémentaires/contact/contact.component';
 
 
 
@@ -34,15 +36,10 @@ import { HttpClientModule } from '@angular/common/http';
     MainComponent,
     FooterComponent,
     PageHelpComponent,
-    DetaillsDesOffresComponent
-
+    DetaillsDesOffresComponent,
+    AProposComponent,
+    ContactComponent
     
-    
-   
-
-  
-   
-   
   ],
   imports: [
     BrowserModule,

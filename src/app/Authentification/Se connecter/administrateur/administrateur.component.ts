@@ -63,5 +63,9 @@ this._service.ConnectionAdmin(formdata).subscribe((response:any)=>{
     localStorage.setItem("token",response.Token)
   }
 })
+
+this._service.changeData(localStorage.getItem("token"));
 }
+
+
 }

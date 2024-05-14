@@ -33,15 +33,14 @@ h1 {
 
 .nav-tabs {
 	display: flex;
-	font-weight: 600;
 	font-size: 18px;
 	list-style: none;
-	width: 100%;
+	width: 95%;
 }
 
 
 .nav-tab:not(:last-child) {
-	padding: 10px 25px;
+	padding: 10px 20px;
 	margin: 0;
 }
 

@@ -9,15 +9,25 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent {
 
-token: any = "";
+token: any ;
 constructor(private _service:ServiceAuthentificationService,private router:Router){
-  this.token=_service.RecupererToken();
+  this.token = localStorage.getItem('token');
 }
 
 SeDeconnecter() {
-localStorage.clear();
+localStorage.setItem("token","");
+this.token=""
 this.router.navigate(["/"])
 }
+
+
+
+ngOnInit() {
+  this._service.data$.subscribe((data) => {
+    this.token = data;
+  });
+}
+
 
 
 }
