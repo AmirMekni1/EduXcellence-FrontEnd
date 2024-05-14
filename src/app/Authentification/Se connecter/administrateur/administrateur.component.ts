@@ -9,10 +9,10 @@ import { ServiceAuthentificationService } from '../../Service/service-authentifi
 })
 export class AdministrateurComponent {
 
-ID: any;
-motdepasse: any;
+ID="";
+motdepasse="";
 
-essagesuccess: any;
+
 messagealert: any;
 messageerror: any;
 messagesuccess: any;
@@ -30,20 +30,37 @@ isValidEmail(email: string): boolean {
 }
 
 ConnexionAdministrateur() {
+  if(this.ID == ""){
+    this.messagealert = "ID Obligatoire"
+    setTimeout(() => {
+      this.messagealert = ""
+    }, 2500);
+    return;
+  }
+  if(this.motdepasse==""){
+    this.messagealert = "Mot de passe Obligatoire"
+    setTimeout(() => {
+      this.messagealert = ""
+      }, 2500);
+      return;
+  }
 let formdata = new FormData();
-formdata.append('ID', this.ID);
+formdata.append('id', this.ID);
 formdata.append("MotDePasse",this.motdepasse)
 this._service.ConnectionAdmin(formdata).subscribe((response:any)=>{
-  if(response.Message == "Invalid email or password"){
+  if(response.Message == "Invalid ID or password"){
+    this.messageerror = response.Message; 
     setTimeout(() => {
-     this.messageerror = response.Message; 
+     this.messageerror = ""; 
     }, 2500);
     
   }else{
+    this.messagesuccess = response.Message;
     setTimeout(() => {
-      this.messagesuccess = response.Message;
+      this.messagesuccess = "";
+      this.router.navigate(["/Administrateur/Dashboard"])
     }, 2500);
-    this.router.navigate(["/Administrateur/Dashboard"])
+    localStorage.setItem("token",response.Token)
   }
 })
 }

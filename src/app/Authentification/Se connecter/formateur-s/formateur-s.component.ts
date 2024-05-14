@@ -8,11 +8,9 @@ import { ServiceAuthentificationService } from '../../Service/service-authentifi
   styleUrl: './formateur-s.component.css'
 })
 export class FormateurSComponent {
-ConnexionFormateur() {
-throw new Error('Method not implemented.');
-}
-Matricule: any;
-motdepasse: any;
+
+Matricule= "";
+motdepasse="";
 messageerror: any;
 messagealert: any;
 messagesuccess: any;
@@ -29,6 +27,50 @@ isValidEmail(email: string): boolean {
   return /\S+@\S+\.\S+/.test(email);
 }
 
+ConnexionFormateur() {
+if (this.Matricule==""){
+  this.messagealert="Email Obligatoire"
+  setTimeout(() => {
+    this.messagealert = ""
+  }, 2500);
+  return;
+}
+if (this.motdepasse==""){
+  this.messagealert = "Mot de passe Obligatoire"
+  setTimeout(() => {
+    this.messagealert = ""
+    }, 2500);
+    return;
+    }
 
+    let formdata = new FormData()
+    formdata.append('Matricule', this.Matricule)
+    formdata.append('motdepasse', this.motdepasse)
+        this._service.ConnectionFormateur(formdata).subscribe(
+          (data:any) => {
+            if (data.Message != "Invalid email or password"){
+               this.messagesuccess = data.Message
+            setTimeout(() => {
+              this.messagesuccess = ""
+              this.router.navigate(['/']);
+              }, 2500);
+              localStorage.setItem("token",data.Token)
+            }else{
+              this.messageerror = data.Message
+              setTimeout(() => {
+                this.messageerror = ""
+                }, 2500);
+            }
+              },
+              error => {
+                this.messageerror = "Email ou mot de passe incorrect"
+                setTimeout(() => {
+                  this.messageerror = ""
+                  }, 2500);
+                  }
+                  );
+                  
+
+}
 
 }
