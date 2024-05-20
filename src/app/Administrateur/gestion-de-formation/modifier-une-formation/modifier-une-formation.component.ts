@@ -25,6 +25,7 @@ export class ModifierUneFormationComponent {
   
   constructor(private _service:ServiceAdministrateurService,public dialogRef: MatDialogRef<ModifierUneFormationComponent>){
     this._service.ListerUnSeulFormation(this._service.getIDF(),localStorage.getItem("token")).subscribe((response:any)=>{
+      console.log(typeof(response.Formation.datedebut))
       if (response.Formation){
        this.themedeformation=response.Formation.themeFormation
        this.Description=response.Formation.desciption
@@ -94,7 +95,7 @@ export class ModifierUneFormationComponent {
       }, 2500);
       return;
     }  
-    let formdata = new FormData();
+    let formdata = new FormData();;
     formdata.append("themeFormation",this.themedeformation);
     formdata.append("desciption",this.Description);
     formdata.append("prix",this.Prix);
@@ -104,6 +105,7 @@ export class ModifierUneFormationComponent {
       if (response.Message =="Mise à jour avec succès"){
         this.dialogRef.close();
         this.messagesuccess= response.Message;
+       
         setTimeout(()=>{
           this.messagesuccess="";
           window.location.reload();
@@ -121,6 +123,8 @@ export class ModifierUneFormationComponent {
     const numericRegex = /^[0-9]/;
     return numericRegex.test(Prix);
   }
+    // Custom date formatting function (MM-dd-yyyy)
+  
 
 }
 

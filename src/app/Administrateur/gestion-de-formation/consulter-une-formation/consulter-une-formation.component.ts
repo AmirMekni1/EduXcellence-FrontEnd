@@ -7,6 +7,7 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { EvaluationComponent } from '../evaluation/evaluation.component';
 import { ServiceAdministrateurService } from '../../Service-administrateur/service-administrateur.service';
+import { DatePipe } from '@angular/common';
 
 export interface UserData {
   idformation:any
@@ -32,7 +33,7 @@ export class ConsulterUneFormationComponent  implements AfterViewInit {
 messagesuccess: any=""
 messageerror: any=""
 
-  constructor(public dialog: MatDialog, private _service: ServiceAdministrateurService) {
+  constructor(public dialog: MatDialog, private _service: ServiceAdministrateurService,private datePipe: DatePipe) {
     this.loadFormateurs();
   }
 
@@ -76,6 +77,7 @@ messageerror: any=""
           datedefin :formation.datefin,
           affiche : formation.affiche
         }));
+        console.log(typeof(response.TableFormation.datededebut))
       } else {
         this.dataSource.data = [];
         
@@ -119,5 +121,11 @@ DesactiverFormation(id:any){
     this.messageerror=""
     }, 2500);
 }})}
+
+
+convertDateStringToDate(dateString: string): string {
+  const dateObject = new Date(dateString);
+  return this.datePipe.transform(dateObject, 'dd-MM-yyyy') || '';
+}
 
 }

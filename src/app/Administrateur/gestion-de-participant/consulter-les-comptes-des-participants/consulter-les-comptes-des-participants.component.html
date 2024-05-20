@@ -55,7 +55,7 @@
             <th mat-header-cell *matHeaderCellDef mat-sort-header> Option Compte </th>
             <td mat-cell *matCellDef="let row" >
               <button mat-stroked-button color="primary" (click)="VerifierCompteParticipant(row.id)" *ngIf="row.verification==false">Verifier compte</button>
-              <button mat-stroked-button (click)="openDialog3(row.id)" *ngIf="row.verification==true" >Modifier</button>
+              <span *ngIf="row.verification==true">Participant vérifié</span>
               </td>
           </ng-container>
 
