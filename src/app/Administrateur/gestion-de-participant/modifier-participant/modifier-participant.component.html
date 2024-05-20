@@ -1,52 +1,41 @@
-<h2 mat-dialog-title style="margin: 0px auto;">Ajouter un nouveau formateur</h2>
+<h2 mat-dialog-title style="margin: 0px auto;">Modifier Compte De Participant</h2>
 <mat-dialog-content class="mat-typography">
   
   <form class="example-form" style="display: block;">
-    <mat-form-field class="example-full-width" style="width: 500px; border-radius: 50px; display: block; margin: 0 auto;">
-      <mat-label>Nom et prénom</mat-label>
-      <input matInput [formControl]="nameFormControl" [(ngModel)]="nomprenom">
-      </mat-form-field>
     <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-    <mat-form-field class="example-full-width " style="width: 500px; border-radius: 50px; display: block; margin: 0 auto;">
+       
+<mat-form-field class="example-full-width" style="width: 500px; border-radius: 50%; display: block; margin: 0 auto;">
+  <mat-label>Nom Et Prenom</mat-label>
+  <input type="text" matInput [formControl]="telephoneFormControl" [errorStateMatcher]="matcher" [(ngModel)]="nomprenom" name="nomprenom"
+         placeholder="xx-xxx-xxx">
+ </mat-form-field>
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<mat-form-field class="example-full-width " style="width: 500px; border-radius: 50px; display: block; margin: 0 auto;">
       <mat-label>Email</mat-label>
-      <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher" [(ngModel)]="email"
+      <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher" [(ngModel)]="email" name="email"
              placeholder="Ex. pat@example.com">
-    </mat-form-field>
+     </mat-form-field>
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <mat-form-field style="width: 500px; border-radius: 50%; display: block; margin: 0 auto;">
   <mat-label>Enter your password</mat-label>
-  <input placeholder="xx-xx-xx-xx-xx" matInput [type]="hide ? 'password' : 'text'" [formControl]="motdepasseFormControl" [(ngModel)]="motdepasse" [errorStateMatcher]="matcher">
+  <input placeholder="xx-xx-xx-xx-xx" matInput [type]="hide ? 'password' : 'text'" [formControl]="motdepasseFormControl" [errorStateMatcher]="matcher" [(ngModel)]="motdepasse" name="motdepasse" >
   <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
     <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
   </button>
  </mat-form-field>
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
-   
-<mat-form-field class="example-full-width" style="width: 500px; border-radius: 50%; display: block; margin: 0 auto;">
-  <mat-label>Entrer Numéro de téléphone</mat-label>
-  <input type="tel"  matInput [formControl]="telephoneFormControl" [errorStateMatcher]="matcher" [(ngModel)]="numerotelephone"
-         placeholder="xx--xxx">
-</mat-form-field>
-<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-    
-<!--  <br>        
-   
-  <h3>CV</h3>      
-<div class="card flex justify-content-center" >
-  <p-fileUpload name="myfile[]" url="https://www.primefaces.org/cdn/api/upload.php" [multiple]="true" accept="image/*" maxFileSize="1000000">
-      <ng-template pTemplate="toolbar">
-          <div class="py-3">Déposer un fichier</div>
-      </ng-template>
-      <ng-template let-file pTemplate="file">
-          <div>Custom UI to display a file</div>
-      </ng-template>
-      <ng-template pTemplate="content" let-files>
-          <div>Additional content.</div>
-      </ng-template>
-  </p-fileUpload>
-</div>   -->
+<mat-form-field class="example-form-field" style="width: 500px; border-radius: 50%; display: block; margin: 0 auto;">
+    <mat-label>niveau d'etude</mat-label>
+    <input matInput type="text" [(ngModel)]="value" [(ngModel)]="niveaudetude" name="niveaudetude">
+    @if (value) {
+      <button matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    }
+  </mat-form-field>
 
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <div class="popup success-popup" *ngIf="messagesuccess" style="position: fixed; top: 80px; right: 20px; width: auto;" aria-hidden="true">
   <div class="popup-icon success-icon">
@@ -72,7 +61,7 @@
     >
       <path
         d="m15.8333 5.34166-1.175-1.175-4.6583 4.65834-4.65833-4.65834-1.175 1.175 4.65833 4.65834-4.65833 4.6583 1.175 1.175 4.65833-4.6583 4.6583 4.6583 1.175-1.175-4.6583-4.6583z"
-        class="close-path" (click)="closeAlert()"
+        class="close-path"
       ></path>
     </svg>
   </div>
@@ -104,7 +93,7 @@
     >
       <path
         d="m15.8333 5.34166-1.175-1.175-4.6583 4.65834-4.65833-4.65834-1.175 1.175 4.65833 4.65834-4.65833 4.6583 1.175 1.175 4.65833-4.6583 4.6583 4.6583 1.175-1.175-4.6583-4.6583z"
-        class="close-path" (click)="closeAlert()"
+        class="close-path" 
       ></path>
     </svg>
   </div>
@@ -135,12 +124,13 @@
     >
       <path
         d="m15.8333 5.34166-1.175-1.175-4.6583 4.65834-4.65833-4.65834-1.175 1.175 4.65833 4.65834-4.65833 4.6583 1.175 1.175 4.65833-4.6583 4.6583 4.6583 1.175-1.175-4.6583-4.6583z"
-        class="close-path"  (click)="closeAlert()"
+        class="close-path" 
       ></path>
     </svg>
   </div>
 </div>
 
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
           
   </form>
@@ -149,5 +139,5 @@
 </mat-dialog-content>
 <mat-dialog-actions align="end">
   <button mat-button mat-dialog-close>Annuler</button>
-  <button mat-button  (click)="AjouterUnNouveauFormateur()" cdkFocusInitial>Ok</button>
+  <button mat-button (click)="ModifierCompteDeParticipant()" cdkFocusInitial>Ok</button>
 </mat-dialog-actions>

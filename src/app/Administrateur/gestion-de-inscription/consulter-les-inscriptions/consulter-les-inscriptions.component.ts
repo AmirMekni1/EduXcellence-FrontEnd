@@ -1,13 +1,11 @@
 import { Component, ViewChild } from '@angular/core';
-import { ModifierParticipantComponent } from '../modifier-participant/modifier-participant.component';
 import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
-import { MatTableDataSource } from '@angular/material/table';
 import { MatSort } from '@angular/material/sort';
-import { ConsulterLesDemandesDinscriptionComponent } from '../consulter-les-demandes-dinscription/consulter-les-demandes-dinscription.component';
-import { GestionDePayementComponent } from '../gestion-de-payement/gestion-de-payement.component';
-
-
+import { MatTableDataSource } from '@angular/material/table';
+import { GestionDePayementComponent } from '../../gestion-de-participant/gestion-de-payement/gestion-de-payement.component';
+import { ModifierParticipantComponent } from '../../gestion-de-participant/modifier-participant/modifier-participant.component';
+import { PlanificationDeFormationComponent } from '../planification-de-formation/planification-de-formation.component';
 
 export interface UserData {
   id: string;
@@ -51,13 +49,11 @@ const NAMES: string[] = [
 ];
 
 @Component({
-  selector: 'app-consulter-les-comptes-des-participants',
-  templateUrl: './consulter-les-comptes-des-participants.component.html',
-  styleUrl: './consulter-les-comptes-des-participants.component.css'
+  selector: 'app-consulter-les-inscriptions',
+  templateUrl: './consulter-les-inscriptions.component.html',
+  styleUrl: './consulter-les-inscriptions.component.scss'
 })
-
-export class ConsulterLesComptesDesParticipantsComponent {
-
+export class ConsulterLesInscriptionsComponent {
 
   openDialog2() {
     const dialogRef = this.dialog.open(GestionDePayementComponent);
@@ -110,7 +106,7 @@ export class ConsulterLesComptesDesParticipantsComponent {
    
    
      openDialog() {
-       const dialogRef = this.dialog.open(ConsulterLesDemandesDinscriptionComponent,{width: '1500px',});
+       const dialogRef = this.dialog.open(PlanificationDeFormationComponent,{width: '1500px',});
    
        dialogRef.afterClosed().subscribe((result: any) => {
         
