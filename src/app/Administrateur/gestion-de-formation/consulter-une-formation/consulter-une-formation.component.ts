@@ -33,7 +33,7 @@ export class ConsulterUneFormationComponent  implements AfterViewInit {
 messagesuccess: any=""
 messageerror: any=""
 
-  constructor(public dialog: MatDialog, private _service: ServiceAdministrateurService,private datePipe: DatePipe) {
+  constructor(public dialog: MatDialog, private _service: ServiceAdministrateurService) {
     this.loadFormateurs();
   }
 
@@ -73,8 +73,8 @@ messageerror: any=""
           idformation:formation.idformation,
           themeFormation:formation.themeFormation,
           prix:formation.prix,
-          datededebut:formation.datedebut,
-          datedefin :formation.datefin,
+          datededebut:this.formatDate(new Date(formation.datedebut)),
+          datedefin :this.formatDate(new Date(formation.datefin)),
           affiche : formation.affiche
         }));
         console.log(typeof(response.TableFormation.datededebut))
@@ -90,7 +90,7 @@ messageerror: any=""
     let formdata = new FormData()
     formdata.append('id',id)
     this._service.ActiverFormation(localStorage.getItem('token'),formdata).subscribe((response: any) => {
-      if(response.Message=="Formation Activer"){
+      if(response.Message){
         this.messagesuccess=response.Message
         setTimeout(() => {
           this.messagesuccess=""
@@ -104,12 +104,16 @@ messageerror: any=""
   }
 })}
 
+formatDate(date: Date): string {
+  return date.toLocaleDateString('fr-FR', { year: 'numeric', month: '2-digit', day: '2-digit' });
+}
+
 
 DesactiverFormation(id:any){
   let formdata = new FormData()
   formdata.append('id',id)
   this._service.DesactiverFormation(localStorage.getItem('token'),formdata).subscribe((response: any) => {
-    if(response.Message=="Formation Desactiver"){
+    if(response.Message){
       this.messagesuccess=response.Message
       setTimeout(() => {
         this.messagesuccess=""
@@ -123,9 +127,9 @@ DesactiverFormation(id:any){
 }})}
 
 
-convertDateStringToDate(dateString: string): string {
+/*convertDateStringToDate(dateString: string): string {
   const dateObject = new Date(dateString);
   return this.datePipe.transform(dateObject, 'dd-MM-yyyy') || '';
-}
+}*/
 
 }

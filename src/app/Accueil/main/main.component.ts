@@ -17,13 +17,14 @@ export class MainComponent implements OnInit{
     this._service.ConsulterLesFormation(localStorage.getItem('token')).subscribe((response:any)=>{
       if(response.TableFormation){
         this.listeFormation=response.TableFormation;
+        console.log(response.TableFormation)
       }
     })
   }
 
-  openDialog() {
-    const dialogRef = this.dialog.open(DetaillsDesOffresComponent);
-
+  openDialog(x:any) {
+    this._service.SetIDF(x)
+    const dialogRef = this.dialog.open(DetaillsDesOffresComponent,{width:'500px'});
     dialogRef.afterClosed().subscribe((result: any) => {
       console.log(`Dialog result: ${result}`);
     });

@@ -112,4 +112,10 @@ ModifierCompteDeFormateur(formdata: FormData,token:any,id:any) {
     const body = { fileName: fileName };
     return this.http.get("http://localhost:8080/apiAdmin/download/"+fileName, { responseType: 'blob' });
   }
+
+  listerLesPayements(token: any) {
+    const headers = new HttpHeaders().set('token', `${token}`);
+    return this.http.get("http://localhost:8080/apiAdmin/listerPayement",{headers});
+}
+
 }

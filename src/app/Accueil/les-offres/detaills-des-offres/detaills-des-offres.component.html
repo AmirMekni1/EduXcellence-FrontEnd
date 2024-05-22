@@ -1,6 +1,14 @@
-<h2 mat-dialog-title>Titre D'offre</h2>
+<h2 mat-dialog-title>Theme De Formation : <h3>{{UneFormation.desciption}}</h3></h2>
+
 <mat-dialog-content>
-  <p>Description</p>
+  <h2 mat-dialog-title>Description :</h2>
+  <h3>{{UneFormation.desciption}}</h3>
+  <h2 mat-dialog-title>Prix :</h2>
+  <h3>{{UneFormation.prix}}</h3>
+  <h2 mat-dialog-title>Date De Debut :</h2>
+  <h3>{{UneFormation.datedebut}}</h3>
+  <h2 mat-dialog-title>Date De Fin :</h2>
+  <h3>{{UneFormation.datefin}}</h3>
   <button mat-stroked-button color="primary" routerLink="/Participant/Inscription&au&cours">S'inscrire au cours</button>
 </mat-dialog-content>
 <mat-dialog-actions align="end">

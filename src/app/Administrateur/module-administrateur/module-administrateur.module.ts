@@ -51,6 +51,8 @@ import { GestionDePayementComponent } from '../gestion-de-participant/gestion-de
 
 import { CalendarModule } from 'primeng/calendar';
 import { SkeletonModule } from 'primeng/skeleton';//taille width heigth
+
+import { DatePipe } from '@angular/common';
 @NgModule({
   declarations: [
     ProfileComponent,
@@ -97,7 +99,8 @@ import { SkeletonModule } from 'primeng/skeleton';//taille width heigth
     CalendarModule,
     SkeletonModule
   ],providers: [
-    provideNativeDateAdapter()
+    provideNativeDateAdapter(),
+    DatePipe
   ]
 })
 export class ModuleAdministrateurModule { }
