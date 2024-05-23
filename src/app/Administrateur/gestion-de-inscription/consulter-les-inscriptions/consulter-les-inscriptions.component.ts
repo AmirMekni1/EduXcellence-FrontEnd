@@ -51,7 +51,7 @@ export class ConsulterLesInscriptionsComponent implements OnInit{
    
    
      openDialog() {
-       const dialogRef = this.dialog.open(PlanificationDeFormationComponent,{width: '1500px',});
+       const dialogRef = this.dialog.open(PlanificationDeFormationComponent);
    
        dialogRef.afterClosed().subscribe((result: any) => {
         

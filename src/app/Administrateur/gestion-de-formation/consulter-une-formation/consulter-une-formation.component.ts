@@ -5,9 +5,8 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
-import { EvaluationComponent } from '../evaluation/evaluation.component';
 import { ServiceAdministrateurService } from '../../Service-administrateur/service-administrateur.service';
-import { DatePipe } from '@angular/common';
+import { MesformationsComponent } from '../mesformations/mesformations.component';
 
 export interface UserData {
   idformation:any
@@ -16,6 +15,7 @@ export interface UserData {
   datededebut: any;
   datedefin : any;
   affiche : any
+  formateurID:any
 }
 
 @Component({
@@ -24,6 +24,14 @@ export interface UserData {
   styleUrl: './consulter-une-formation.component.css'
 })
 export class ConsulterUneFormationComponent  implements AfterViewInit {
+
+LesFormateursAffectes(x: any) {
+  this._service.SetIDF(x)
+  const dialogRef = this.dialog.open(MesformationsComponent);
+  dialogRef.afterClosed().subscribe((result: any) => {
+    console.log(`Dialog result: ${result}`);
+  });
+}
   
   displayedColumns: string[] = ['themeFormation', 'prix', 'datededebut', 'datedefin','optiondeformation'];
   dataSource: MatTableDataSource<UserData> = new MatTableDataSource<UserData>([]);
@@ -35,6 +43,7 @@ messageerror: any=""
 
   constructor(public dialog: MatDialog, private _service: ServiceAdministrateurService) {
     this.loadFormateurs();
+    
   }
 
   ngAfterViewInit() {
@@ -75,15 +84,16 @@ messageerror: any=""
           prix:formation.prix,
           datededebut:this.formatDate(new Date(formation.datedebut)),
           datedefin :this.formatDate(new Date(formation.datefin)),
-          affiche : formation.affiche
+          affiche : formation.affiche,
+          formateurID:formation.formateurID,
         }));
-        console.log(typeof(response.TableFormation.datededebut))
+        console.log(this.dataSource.data)
       } else {
         this.dataSource.data = [];
         
       }
-      console.log(this.dataSource.data)
     });
+    
   }
 
   ActiverFormation(id:any){

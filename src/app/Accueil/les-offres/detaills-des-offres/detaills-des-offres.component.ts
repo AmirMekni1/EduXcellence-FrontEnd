@@ -13,8 +13,17 @@ export class DetaillsDesOffresComponent implements OnInit {
 
   ngOnInit(): void {
     this._service.ListerUnSeulFormation(this._service.getIDF(),localStorage.getItem("token")).subscribe((response:any)=>{
+      this.DD=this.formatDate(new Date(response.Formation.datedebut));
+      this.DF=this.formatDate(new Date(response.Formation.datefin));
       this.UneFormation=response.Formation
     })
   }
   UneFormation:any
+  DD:any
+  DF:any
+
+  formatDate(date: Date): string {
+    return date.toLocaleDateString('fr-FR', { year: 'numeric', month: '2-digit', day: '2-digit' });
+  }
+
 }
