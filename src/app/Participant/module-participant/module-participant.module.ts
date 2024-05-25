@@ -15,6 +15,7 @@ import { ModifierProfileComponent } from '../profile/modifier-profile/modifier-p
 import { MesOffresComponent } from '../mes-offres/mes-offres.component';
 import { InscriptionAuCoursComponent } from '../inscription-au-cours/inscription-au-cours.component';
 import { RouterModule } from '@angular/router';
+import { DetaillsDesOffresComponent } from '../mes-offres/detaills-des-offres/detaills-des-offres.component';
 
 
 
@@ -24,6 +25,7 @@ import { RouterModule } from '@angular/router';
     ModifierProfileComponent,
     MesOffresComponent,
     InscriptionAuCoursComponent,
+    DetaillsDesOffresComponent
   ],
   imports: [
     CommonModule,

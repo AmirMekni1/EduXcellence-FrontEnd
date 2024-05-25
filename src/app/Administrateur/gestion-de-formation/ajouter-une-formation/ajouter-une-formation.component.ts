@@ -21,11 +21,11 @@ export class AjouterUneFormationComponent {
 
 matcher = new MyErrorStateMatcher();
 
-themedeformation: any
-Description: any
-Prix: any
-datedebut:any
-datefin:any
+themedeformation: any=""
+Description: any=""
+Prix: any=""
+datedebut:any=""
+datefin:any=""
 
 constructor(private _service:ServiceAdministrateurService,public dialogRef: MatDialogRef<AjouterUneFormationComponent>){}
 
@@ -84,23 +84,27 @@ AjouterUneNouvelleFormation(){
   formdata.append("datefin",this.datefin);
   this._service.CreationUneNouvelleFormation(formdata,localStorage.getItem("token")).subscribe((response:any)=>{
     if (response.Message=="La formation a été ajoutée avec succès"){
-      this.dialogRef.close();
       this.messagesuccess= response.Message;
       setTimeout(()=>{
         this.messagesuccess="";
-        window.location.reload();
+        this.dialogRef.close();
       },1500)
-    }else if(response.verif==true) {
-      this.messageerror=response.Message;
-      setTimeout(() => {
-        this.messageerror="";
-      }, 2500);
-    }else if(response.Message== "Il y a déjà une formation prévue à cette date") {
+    }else if(response.Message=="Il y a déjà une formation prévue à cette date") {
       this.messageerror=response.Message;
       setTimeout(() => {
         this.messageerror="";
       }, 2500);
     }else if(response.Message=="La date de fin de la formation doit être après la date de début") {
+      this.messageerror=response.Message;
+      setTimeout(() => {
+        this.messageerror="";
+      }, 2500);
+    }else if(response.Message=="La date de début de la formation doit être aujourd'hui ou après") {
+      this.messageerror=response.Message;
+      setTimeout(() => {
+        this.messageerror="";
+      }, 2500);
+    }else{
       this.messageerror=response.Message;
       setTimeout(() => {
         this.messageerror="";

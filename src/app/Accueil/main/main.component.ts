@@ -10,6 +10,8 @@ import { ServiceParticipantService } from '../../Participant/Service-participant
   styleUrl: './main.component.scss'
 })
 export class MainComponent implements OnInit{
+  user: any;
+  id: any;
 
 
   constructor(public dialog: MatDialog, private _service:ServiceAdministrateurService,private _serviceParticipant:ServiceParticipantService) {}
@@ -22,6 +24,12 @@ export class MainComponent implements OnInit{
         this.DF=this.formatDate(new Date(response.TableFormation.datefin))
       }
     })
+
+    this._serviceParticipant.RecupererId(localStorage.getItem("token")).subscribe((data:any)=>{
+      this.id=data.id
+      this.user=data.user
+    })
+    
   }
 
   openDialog(x:any) {
@@ -41,12 +49,6 @@ export class MainComponent implements OnInit{
     return date.toLocaleDateString('fr-FR', { year: 'numeric', month: '2-digit', day: '2-digit' });
   }
 
-  InscriptionAuCours(){
-    let formdata = new FormData();
-    formdata.append('FormationID',this.);
-    formdata.append('ParticipantID',localStorage.getItem('id'));
 
-    this._serviceParticipant.InscriptionAuCours(localStorage.getItem('token'),).subscribe((response:any)=>{
-  }
 
 }

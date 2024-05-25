@@ -6,7 +6,6 @@ import { ProfileComponent } from '../profile/profile.component';
 const routes: Routes = [
   {path:"Mes&Modules" , component:MesModulesComponent},
   {path:"Profile" , component:ProfileComponent},
-  {path:"in" , component:MesModulesComponent},
 ];
 
 @NgModule({
