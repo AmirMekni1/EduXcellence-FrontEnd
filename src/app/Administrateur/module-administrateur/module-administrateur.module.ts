@@ -1,12 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ContactComponent } from '../contact/contact.component';
 import { AjouterUneFormationComponent } from '../gestion-de-formation/ajouter-une-formation/ajouter-une-formation.component';
 import { ModifierUneFormationComponent } from '../gestion-de-formation/modifier-une-formation/modifier-une-formation.component';
 import { ConsulterUneFormationComponent } from '../gestion-de-formation/consulter-une-formation/consulter-une-formation.component';
 import { ConsulterLesFormateursComponent } from '../gestion-de-formateurs/consulter-les-formateurs/consulter-les-formateurs.component';
 import { AjouterUnFormateurComponent } from '../gestion-de-formateurs/ajouter-un-formateur/ajouter-un-formateur.component';
-import { ProfileComponent } from '../profile/profile.component';
 import { ModuleAdministrateurRoutingModule } from './module-administrateur-routing.module';
 
 /*-----------------------------------------------------------------------Dashboard---------------------------------------------------------------------------------------------*/
@@ -38,7 +36,6 @@ import { ModifierFormateurComponent } from '../gestion-de-formateurs/modifier-fo
 
 
 import { FileUploadModule } from 'primeng/fileupload';
-import { ModifierProfileComponent } from '../profile/modifier-profile/modifier-profile.component';
 import { MatSelectModule } from '@angular/material/select';
 import { EvaluationComponent } from '../gestion-de-formation/evaluation/evaluation.component';
 
@@ -56,8 +53,6 @@ import { DatePipe } from '@angular/common';
 import { MesformationsComponent } from '../gestion-de-formation/mesformations/mesformations.component';
 @NgModule({
   declarations: [
-    ProfileComponent,
-    ContactComponent,
     AjouterUneFormationComponent,
     ModifierUneFormationComponent,
     ConsulterUneFormationComponent,
@@ -68,7 +63,6 @@ import { MesformationsComponent } from '../gestion-de-formation/mesformations/me
     CalendrierComponent,
     ModifierFormateurComponent,
     ModifierParticipantComponent,
-    ModifierProfileComponent,
     GestionDePayementComponent,
     EvaluationComponent,
     ConsulterLesInscriptionsComponent,

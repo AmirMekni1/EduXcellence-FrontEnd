@@ -65,6 +65,10 @@ export class ConsulterLesComptesDesParticipantsComponent {
       this.loadParticipants();
      }
    
+     Deconnecter() {
+      localStorage.clear()
+      }
+      
      ngAfterViewInit() {
        this.dataSource.paginator = this.paginator;
        this.dataSource.sort = this.sort;

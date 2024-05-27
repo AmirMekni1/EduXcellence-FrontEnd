@@ -12,6 +12,10 @@ export class DashboardComponent implements OnInit {
     
   }
 
+  Deconnecter() {
+    localStorage.clear()
+    }
+
  HighchartL: typeof Highcharts = Highcharts;
   chartOptionsL: Highcharts.Options = {
     credits : { enabled : false },

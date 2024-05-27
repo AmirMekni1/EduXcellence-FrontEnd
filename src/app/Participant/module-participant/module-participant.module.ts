@@ -44,7 +44,9 @@ import { DetaillsDesOffresComponent } from '../mes-offres/detaills-des-offres/de
     ReactiveFormsModule,
     RouterModule
     
+    
   ]
+  
 
 })
 export class ModuleParticipantModule { }

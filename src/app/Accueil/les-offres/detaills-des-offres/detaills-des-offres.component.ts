@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ServiceAdministrateurService } from '../../../Administrateur/Service-administrateur/service-administrateur.service';
 import { ServiceParticipantService } from '../../../Participant/Service-participant/service-participant.service';
 import { MatDialogRef } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-detaills-des-offres',
@@ -9,6 +10,7 @@ import { MatDialogRef } from '@angular/material/dialog';
   styleUrl: './detaills-des-offres.component.scss'
 })
 export class DetaillsDesOffresComponent implements OnInit {
+  token: string | null | undefined;
 closeAlert() {
 throw new Error('Method not implemented.');
 }
@@ -19,9 +21,10 @@ messagealert: any;
 messageerror: any;
 
 
-  constructor(private _service:ServiceAdministrateurService,private _serviceParticipant:ServiceParticipantService,public dialogRef: MatDialogRef<DetaillsDesOffresComponent> ){}
+  constructor(private _service:ServiceAdministrateurService,private _serviceParticipant:ServiceParticipantService,public dialogRef: MatDialogRef<DetaillsDesOffresComponent> , private router:Router){}
 
   ngOnInit(): void {
+    this.token=localStorage.getItem('token')
     this._service.ListerUnSeulFormation(this._service.getIDF(),localStorage.getItem("token")).subscribe((response:any)=>{
       console.log(response)
       this.DD=this.formatDate(new Date(response.Formation.datedebut));
@@ -44,6 +47,11 @@ messageerror: any;
   }
 
   InscriptionAuCours(){
+    if(this.token==null){
+      this.dialogRef.close()
+      this.router.navigate(["/Authentification/Connexion/Participant"])
+    }
+    else if(this.user=='Participant'){
     let formdata = new FormData();
     formdata.append('FormationID',this._service.getIDF());
     formdata.append('ParticipantID',this.id);
@@ -67,5 +75,6 @@ messageerror: any;
           }, 2500);
       }
   });
+    }
 }
 }

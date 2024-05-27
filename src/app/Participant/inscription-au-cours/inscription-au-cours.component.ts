@@ -8,8 +8,16 @@ import { MyErrorStateMatcher } from '../../Administrateur/gestion-de-formateurs/
   styleUrl: './inscription-au-cours.component.scss'
 })
 export class InscriptionAuCoursComponent {
-
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
   NPFormControl = new FormControl('',[Validators.required]);
   matcher = new MyErrorStateMatcher();
+
+  
+  selectedFileName: string = '';
+
+ 
+  onFileSelected(event: any) {
+    const file: File = event.target.files[0];
+    this.selectedFileName = file ? file.name : '';
+  }
 }

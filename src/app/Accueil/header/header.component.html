@@ -9,8 +9,9 @@
                          <a routerLink="/EduXcellence/Propos" class="nav-point" ><li class="nav-tab">A propos</li></a>
                          <a routerLink="/EduXcellence/Contact" class="nav-point" ><li class="nav-tab">Contact</li></a>
                          <a routerLink="" class="nav-point"><li class="nav-tab" *ngIf="this.user=='Participant' ">FAQ</li></a>
-                         <a routerLink="/EduXcellence/Contact" class="nav-point" *ngIf="this.user!='Participant' || this.user!='Formateur'" (click)="SeConnecter()"><li class="nav-tab">Se Connecter</li></a>
-                         <a routerLink="/EduXcellence/Contact" class="nav-point" *ngIf="this.user=='Participant' || this.user=='Formateur' " (click)="SeDeconnecter()"><li class="nav-tab">Se Deconnecter</li></a>
+                         <a routerLink="/EduXcellence/Contact" class="nav-point" *ngIf=" this.token==null" (click)="SeConnecter()"><li class="nav-tab">Se Connecter</li></a>
+                         <a routerLink="/EduXcellence/Contact" class="nav-point" *ngIf=" this.token!=null" (click)="SeDeconnecter()"><li class="nav-tab">Se Deconnecter</li></a>{{this.user}}
+
             </ul>
           </nav>
         </main>

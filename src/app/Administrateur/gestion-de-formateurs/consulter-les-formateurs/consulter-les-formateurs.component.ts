@@ -16,6 +16,7 @@ export interface UserData {
   active:any
   specialite:any
   formationId:any
+  Disponiblite:any
 }
 
 @Component({
@@ -78,15 +79,20 @@ messageerror: any;
           numTelephone:formateur.numTelephone,
           active:formateur.active,
           specialite:formateur.specialite,
-          formationId:formateur.formationID
+          formationId:formateur.formationID,
+          Disponiblite:formateur.disponiblite
         }));
-        
+        console.log(this.dataSource.data)
       } else {
         this.dataSource.data = [];
       }
     });
   }
 
+  Deconnecter() {
+    localStorage.clear()
+    }
+    
   ActiverCompteFormateur(id:any){
     let formdata = new FormData();
     formdata.append("id",id)
@@ -105,6 +111,13 @@ messageerror: any;
   }
 })}
 
+Reassignation(x:any){
+  let formdata = new FormData();
+  formdata.append("id",x)
+  this._service.Reassignation(localStorage.getItem("token"),formdata).subscribe((data:any)=>{
+    
+  })
+}
 
 DesactiverCompteFormateur(id:any){
   let formdata = new FormData();

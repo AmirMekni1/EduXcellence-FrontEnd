@@ -17,7 +17,7 @@ export class MainComponent implements OnInit{
   constructor(public dialog: MatDialog, private _service:ServiceAdministrateurService,private _serviceParticipant:ServiceParticipantService) {}
 
   ngOnInit(): void {
-    this._service.ConsulterLesFormation(localStorage.getItem('token')).subscribe((response:any)=>{
+    this._service.filtrerFormations(localStorage.getItem('token')).subscribe((response:any)=>{
       if(response.TableFormation){
         this.listeFormation=response.TableFormation;
         this.DD=this.formatDate(new Date(response.TableFormation.datedebut))

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { ServiceAuthentificationService } from '../../Authentification/Service/service-authentification.service';
 import { Router } from '@angular/router';
 import { ServiceParticipantService } from '../../Participant/Service-participant/service-participant.service';
@@ -8,7 +8,7 @@ import { ServiceParticipantService } from '../../Participant/Service-participant
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit,OnChanges {
 
 token: any ;
   id: any;
@@ -17,6 +17,9 @@ token: any ;
 constructor(private _service:ServiceAuthentificationService,private router:Router, private _serviceParticipant:ServiceParticipantService){
   this.token = localStorage.getItem('token');
 }
+  ngOnChanges(token: SimpleChanges): void {
+    confirm('ok')
+  }
 
 SeDeconnecter(){
 localStorage.clear()
@@ -39,10 +42,12 @@ ngOnInit() {
     this.id=data.id
     this.user=data.user
   })
-
+console.log(this.user)
   this._service.data$.subscribe((data) => {
     this.token = data;
   });
+  
+  
 }
 
 

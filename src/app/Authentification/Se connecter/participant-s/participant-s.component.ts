@@ -17,7 +17,7 @@ throw new Error('Method not implemented.');
 messagesuccess: any;
 
   constructor( private _service:ServiceAuthentificationService,private router:Router){
-
+    
   }
 motdepasse="";
 email="";
@@ -44,7 +44,9 @@ connexion() {
   if ( response.verif == "true" ){
     this.messagesuccess = response.Message;
     setTimeout(() => {
+       
     this.router.navigate(['/']);
+    
     }, 2500);
     console.log(response.Message)
     localStorage.setItem("token",response.Token);

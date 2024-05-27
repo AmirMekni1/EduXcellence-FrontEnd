@@ -95,6 +95,9 @@ messageerror: any=""
     });
     
   }
+  Deconnecter() {
+    localStorage.clear()
+    }
 
   ActiverFormation(id:any){
     let formdata = new FormData()

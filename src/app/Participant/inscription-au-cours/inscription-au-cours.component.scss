@@ -22,6 +22,7 @@
     display: ruby;
     padding: var(--dl-space-space-fourunits);
     align-items: flex-start;
+    padding-top: 10%;
 	
   }
 
@@ -56,3 +57,24 @@
     justify-content: center;
     width: 120px;
   }
+  /*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+  .input {
+    max-width: 190px;
+    display: none;
+  }
+  
+  .labelFile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 250px;
+    height: 190px;
+    border: 2px dashed #ccc;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+    color: #404040;
+    cursor: pointer;
+  }
+  

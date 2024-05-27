@@ -6,6 +6,7 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class ServiceAuthentificationService {
+  url: any;
 
   constructor(private http: HttpClient) { }
 
@@ -39,5 +40,12 @@ export class ServiceAuthentificationService {
   changeData(newData: any) {
     this.dataSource.next(newData);
   }
+
+  setURL(x:any){
+    this.url=x
+  }
   
+  getURL(){
+    return this.url
+  }
 }

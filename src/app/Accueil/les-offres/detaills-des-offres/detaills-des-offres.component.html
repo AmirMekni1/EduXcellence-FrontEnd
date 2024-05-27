@@ -22,7 +22,7 @@
 <mat-dialog-actions align="end">
   <mat-dialog-actions align="end">
     <button mat-button mat-dialog-close>Annuler</button>
-    <button mat-button (click)="InscriptionAuCours()" cdkFocusInitial *ngIf="this.user=='Participant' ">S'inscrire au cours</button>
+    <button mat-button (click)="InscriptionAuCours()" cdkFocusInitial *ngIf="this.user=='Participant' || this.token==null ">S'inscrire au cours</button>
     <button mat-button (click)="InscriptionAuCours()" cdkFocusInitial *ngIf="this.user=='Formateur' ">Contacter Avec L'admin</button>
   </mat-dialog-actions>
 
