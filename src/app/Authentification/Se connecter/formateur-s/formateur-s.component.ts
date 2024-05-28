@@ -49,6 +49,7 @@ if (this.motdepasse==""){
         this._service.ConnectionFormateur(formdata).subscribe(
           (data:any) => {
             if (data.Message != "Invalid email or password"){
+              localStorage.setItem('reload',"active")
                this.messagesuccess = data.Message
             setTimeout(() => {
               this.messagesuccess = ""

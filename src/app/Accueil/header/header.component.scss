@@ -5,9 +5,9 @@
 $code: "Inconsolata";
 $text: "Montserrat";
 /*colors*/
-$navbar: rgba(36, 45, 57, 0.5);
+$navbar: rgba(255, 255, 255, 0.5);
 $dark-gray: rgb(36, 45, 57);
-$yellow: #f6e4ad;
+$yellow:  rgb(219, 238, 246);
   
 * {
   margin: 0;
@@ -19,7 +19,7 @@ $yellow: #f6e4ad;
 
 #main-doc {
   width: 100%;
-  background-color: black;
+  background-color: rgb(255, 255, 255);
   position: fixed;
   top: 0;
   left: 0;
@@ -30,13 +30,12 @@ $yellow: #f6e4ad;
       justify-content: center;
       position: sticky;
       /*position: relative;*/
-      width: auto;
+      width: 100%;
       height: 80px;
       background-color: $navbar;
-      color: white;
       margin: 0px auto 0;
       border-radius: 10px;
-      box-shadow: 0 0 1.5px 1px rgba(255, 255, 255,           0.4), 0 0 1.5px 1px rgba(255, 255, 255, 0.4) inset;
+      text-align: center;
       @media screen and (max-width: 780px) {
     width: 550px;
   }
@@ -54,7 +53,7 @@ $yellow: #f6e4ad;
   
   a {
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
     position: relative;
     display: inline-block;
   }

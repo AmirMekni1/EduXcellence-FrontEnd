@@ -42,11 +42,10 @@ connexion() {
    formdata.append("motDePasse",this.motdepasse);
  this._service.Connection(formdata).subscribe((response:any)=>{
   if ( response.verif == "true" ){
+    localStorage.setItem('reload',"active")
     this.messagesuccess = response.Message;
     setTimeout(() => {
-       
     this.router.navigate(['/']);
-    
     }, 2500);
     console.log(response.Message)
     localStorage.setItem("token",response.Token);

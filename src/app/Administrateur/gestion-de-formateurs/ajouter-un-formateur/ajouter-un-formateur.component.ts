@@ -104,13 +104,17 @@ specialite: any="";
     formdata.append("numTelephone",this.numerotelephone);
     formdata.append("specialite",this.specialite);
     this._service.CreationUnNoveauFormateur(formdata,localStorage.getItem('token')).subscribe((response:any)=>{
-      if (response.Message =="Noveau Formateur Ajouté Avec Succès"){
-        this.dialogRef.close();
-        this.messagesuccess= response.Message;
+      if (response.Message=="Nouveau Formateur Ajouté Avec Succès"){
+        this.messagesuccess=response.Message;
         setTimeout(()=>{
           this.messagesuccess="";
           window.location.reload();
-        },1500)
+        },2500)
+      }else if (response.Message=="Cet Email Exite Déjà"){
+        this.messageerror=response.Message;
+        setTimeout(() => {
+          this.messageerror="";
+        }, 2500);
       }else{
         this.messageerror=response.Message;
         setTimeout(() => {

@@ -9,9 +9,9 @@ import { Router } from '@angular/router';
 })
 export class ParticipantIComponent {
 
-messagesuccess: any;
-messagealert: any;
-messageerror: any;
+messagesuccess: any="";
+messagealert: any="";
+messageerror: any="";
 
 NiveauDetudeTouched: boolean = false;
 NomPrenomTouched: boolean = false;
@@ -64,21 +64,21 @@ InscriptionParticipant(){
   formdata.append('niveauDEtude',this.Niveaudetude);
   this._service.InscriptionParticipant(formdata).subscribe(
     (data:any)=>{
-      if (data.Message=="Ajouté avec Succées"){
+      if (data.Message=="Ajouté avec Succès"){
         this.messagesuccess=data.Message;
         setTimeout(() => {
           this.router.navigate(["/Authentification/Connexion/Participant"]);
         }, 2500); 
-    }else{
+    }else if (data.Message=="Email existe Déjà"){
       this.messageerror=data.Message;}
       setTimeout(() => {
-        this.messageerror  = false;
+        this.messageerror  = "";
       }, 2500); 
     },
     (error) => {
       this.messageerror=error.Message;
       setTimeout(() => {
-        this.messageerror  = false;
+        this.messageerror  = "";
       }, 2500); 
     }
   );

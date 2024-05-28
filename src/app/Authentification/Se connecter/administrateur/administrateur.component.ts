@@ -55,6 +55,7 @@ this._service.ConnectionAdmin(formdata).subscribe((response:any)=>{
     }, 2500);
     
   }else{
+    localStorage.setItem('reload',"active")
     this.messagesuccess = response.Message;
     setTimeout(() => {
       this.messagesuccess = "";

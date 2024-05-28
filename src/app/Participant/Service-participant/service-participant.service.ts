@@ -10,6 +10,7 @@ import { Observable } from 'rxjs';
 })
 export class ServiceParticipantService implements OnInit {
   
+  
   currentUrl: string | undefined;
   x: any;
  
@@ -41,4 +42,11 @@ export class ServiceParticipantService implements OnInit {
   SetIDF(id:any){
     this.x=id;
   }
+  
+  insererBonDeCommande(token:any,formdata:any){
+    const headers = new HttpHeaders().set('token', `${token}`);
+    return this.http.post("http://localhost:8080/apiParticipant/insererBonDeCommande",formdata,{headers});
+  }
+
 }
+

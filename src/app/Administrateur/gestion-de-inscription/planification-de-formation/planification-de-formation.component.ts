@@ -48,7 +48,7 @@ messageerror: any;
       this.messagesuccess=data.Message;
       setTimeout(() => {
         this.messagesuccess="";
-
+        window.location.reload()
       }, 2500);
     })
   }

@@ -115,7 +115,7 @@ Reassignation(x:any){
   let formdata = new FormData();
   formdata.append("id",x)
   this._service.Reassignation(localStorage.getItem("token"),formdata).subscribe((data:any)=>{
-    
+    window.location.reload()
   })
 }
 

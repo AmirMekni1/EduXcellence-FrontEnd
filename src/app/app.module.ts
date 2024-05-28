@@ -21,6 +21,7 @@ import { MatDialogActions, MatDialogClose, MatDialogContent, MatDialogTitle } fr
 import { HttpClientModule } from '@angular/common/http';
 
 import { MenubarModule } from 'primeng/menubar';
+import { ElementsSupplementairesModule } from './Éléments supplémentaires/elements-supplementaires/elements-supplementaires.module';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { MenubarModule } from 'primeng/menubar';
     HeaderComponent,
     MainComponent,
     FooterComponent,
+    
     
   ],
   imports: [
@@ -39,6 +41,7 @@ import { MenubarModule } from 'primeng/menubar';
     ModuleAdministrateurModule,
     ModuleFormateurModule,
     ModuleParticipantModule,
+    ElementsSupplementairesModule,
     MatProgressBarModule,
     MatInputModule, 
     FormsModule, 
@@ -48,7 +51,8 @@ import { MenubarModule } from 'primeng/menubar';
     MatDialogActions,
     MatDialogClose,
     HttpClientModule,
-    MenubarModule
+    MenubarModule,
+     
   
   ],
   providers: [

@@ -108,13 +108,11 @@ export class ModifierUneFormationComponent {
     };
     this._service.ModifierUneFormation(formdata,localStorage.getItem('token'),this._service.getIDF()).subscribe((response:any)=>{
       if (response.Message =="Mise à jour avec succès"){
-        this.dialogRef.close();
         this.messagesuccess= response.Message;
-       
         setTimeout(()=>{
           this.messagesuccess="";
           window.location.reload();
-        },1500)
+        },2500)
       }else{
         this.messageerror=response.Message;
         setTimeout(() => {

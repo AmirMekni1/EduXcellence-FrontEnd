@@ -106,13 +106,13 @@ export class ConsulterLesComptesDesParticipantsComponent {
       let formdata = new FormData();
       formdata.append("id",id)
       this._service.VerifierCompteParticipant(localStorage.getItem('token'),formdata).subscribe((response: any) => {
-        if(response.Message=="compte verifier"){
+        if(response.Message=="Le compte est verifié"){
           this.messagesuccess=response.Message
           setTimeout(() => {
             this.messagesuccess=""
             window.location.reload();
           }, 2500);
-    }else{
+    }else if (response.Message=="Accès refusé"){
       this.messageerror=response.Message
       setTimeout(() => {
         this.messageerror=""

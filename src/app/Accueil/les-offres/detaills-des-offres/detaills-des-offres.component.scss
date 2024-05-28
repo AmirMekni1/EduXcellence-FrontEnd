@@ -1,3 +1,20 @@
+#styled-textarea {
+  width: 100%;
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  font-size: 1em; /* Match the paragraph font size */
+  font-family: inherit; /* Inherit the font family from parent */
+  line-height: 1.5; /* Match the line height of paragraphs */
+  resize: none; /* Disable resizing */
+  overflow: hidden; /* Prevent scrollbars */
+  background-color: transparent; /* Match the background color */
+}
+#styled-textarea:focus {
+  border: none;
+  outline: none;
+}
 
 
 /* COMMON STYLES*/

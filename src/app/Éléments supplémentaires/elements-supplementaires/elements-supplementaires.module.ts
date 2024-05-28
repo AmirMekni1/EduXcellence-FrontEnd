@@ -4,10 +4,8 @@ import { CommonModule } from '@angular/common';
 import { ElementsSupplementairesRoutingModule } from './elements-supplementaires-routing.module';
 import { PageHelpComponent } from '../page-help/page-help.component';
 import { DetaillsDesOffresComponent } from '../../Accueil/les-offres/detaills-des-offres/detaills-des-offres.component';
-import { AProposComponent } from '../a-propos/a-propos.component';
 import { ContactComponent } from '../contact/contact.component';
 import { PageDErreurDeConnexionComponent } from '../page-d-erreur-de-connexion/page-d-erreur-de-connexion.component';
-import { BrowserModule } from '@angular/platform-browser';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
@@ -17,20 +15,20 @@ import { HttpClientModule } from '@angular/common/http';
 import { MenubarModule } from 'primeng/menubar';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { provideAnimations } from '@angular/platform-browser/animations';
+import { ProposComponent } from '../propos/propos.component';
 
 
 @NgModule({
   declarations: [
     PageHelpComponent,
     DetaillsDesOffresComponent,
-    AProposComponent,
     ContactComponent,
     PageDErreurDeConnexionComponent,
+    ProposComponent,
   ],
   imports: [
     CommonModule,
     ElementsSupplementairesRoutingModule,
-    BrowserModule,
     MatProgressBarModule,
     MatInputModule, 
     FormsModule, 
@@ -40,7 +38,7 @@ import { provideAnimations } from '@angular/platform-browser/animations';
     MatDialogActions,
     MatDialogClose,
     HttpClientModule,
-    MenubarModule
+    MenubarModule,
   ],
   providers: [
     provideAnimationsAsync(),

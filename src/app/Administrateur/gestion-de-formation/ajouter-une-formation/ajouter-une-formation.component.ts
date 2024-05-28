@@ -87,7 +87,7 @@ AjouterUneNouvelleFormation(){
       this.messagesuccess= response.Message;
       setTimeout(()=>{
         this.messagesuccess="";
-        this.dialogRef.close();
+        window.location.reload()
       },1500)
     }else if(response.Message=="Il y a déjà une formation prévue à cette date") {
       this.messageerror=response.Message;

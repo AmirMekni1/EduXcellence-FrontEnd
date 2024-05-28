@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: "Administrateur", loadChildren: () => import("../app/Administrateur/module-administrateur/module-administrateur.module").then((e) => e.ModuleAdministrateurModule) },
   { path: "Formateur", loadChildren: () => import("../app/Formateur/module-formateur/module-formateur.module").then((e) => e.ModuleFormateurModule) },
   { path : "Participant", loadChildren : () => import("../app/Participant/module-participant/module-participant.module").then((e)=> e.ModuleParticipantModule)},
-  { path : "EduXcellence", loadChildren : () => import("../app/Éléments supplémentaires/elements-supplementaires/elements-supplementaires.module").then((e)=> e.ElementsSupplementairesModule)},
+ // { path : "EduXcellence", loadChildren : () => import("../app/Éléments supplémentaires/elements-supplementaires/elements-supplementaires.module").then((e)=> e.ElementsSupplementairesModule)},
   { path: "", component: MainComponent },
   { path: "**", component: Page404Component },
 ];

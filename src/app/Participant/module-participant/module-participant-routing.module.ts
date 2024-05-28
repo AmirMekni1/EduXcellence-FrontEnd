@@ -7,7 +7,7 @@ import { DetaillsDesOffresComponent } from '../mes-offres/detaills-des-offres/de
 
 const routes: Routes = [
   {path : "Profile" , component : ProfileComponent},
-  {path : "Inscription&au&cours" , component : InscriptionAuCoursComponent},
+  {path : "Inscription-au-cours/:idformation" , component : InscriptionAuCoursComponent},
   {path : "MesFormation" , children :[
     {path : "Cartes" , component : MesOffresComponent},
     {path : "Formation" , component : DetaillsDesOffresComponent}
