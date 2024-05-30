@@ -1,0 +1,22 @@
+<div class="home-container">
+    <span class="home-text">
+      <span>Contact-nous</span>
+      <br />
+    </span>
+    <input type="text" name="Email" [(ngModel)]="Email" placeholder="Email" class="home-textinput input" *ngIf="!token" />
+    <input type="text" name="Sujet" [(ngModel)]="Sujet" placeholder="Sujet" class="home-textinput input" />
+    <img
+      src="https://github.com/AmirMekni1/EduXcellence-FrontEnd/blob/EduXcellence-FrontEnd/src/app/Authentification/Se%20connecter/participant-s/logo.png?raw=true"
+      alt="image"
+      class="home-image"
+    />
+    <textarea placeholder="Contenu" name="Contenu" [(ngModel)]="Contenu" class="home-textarea textarea"></textarea>
+    <span class="home-text3">EduXcellence</span>
+    <button type="button" (click)="Envoyer()" class="home-button  button">
+      <span>
+        <span>Envoyer</span>
+        <br />
+      </span>
+    </button>
+  </div>
+  

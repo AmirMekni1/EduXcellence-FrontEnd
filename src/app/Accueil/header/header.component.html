@@ -1,18 +1,18 @@
 
         <main id="main-doc">
           <nav id="nav-bar">
-            <a href="#"><i class="fa-brands fa-github"></i></a>
             <ul id="nav-ul">
               <img style="width: 2.5%;height: auto; position: absolute; top: 20px; left: 50px;" src="https://github.com/AmirMekni1/EduXcellence-FontEnd/blob/EduXcellence-FrontEnd/src/app/Authentification/Se%20connecter/participant-s/logo.png?raw=true" alt="">
               <a routerLink="/" class="nav-point"><li class="nav-tab" >Home</li></a>
                          <a routerLink="/Participant/MesFormation/Cartes" class="nav-point" *ngIf="this.user=='Participant' "><li class="nav-tab">Mes Formation</li></a>
                          <a routerLink="/Formateur/Mes&Modules" class="nav-point" *ngIf="this.user=='Formateur' "><li class="nav-tab">Mes Modules</li></a>
-                         <a routerLink="/EduXcellence/propos" class="nav-point" ><li class="nav-tab">A propos</li></a>
+                         <a routerLink="/EduXcellence/Propos" class="nav-point" ><li class="nav-tab">A propos</li></a>
                          <a routerLink="/EduXcellence/Contact" class="nav-point" ><li class="nav-tab">Contact</li></a>
                          <!--a routerLink="" class="nav-point"><li class="nav-tab" *ngIf="this.user=='Participant' ">FAQ</li></a-->
+                        
                          <a  class="nav-point" *ngIf=" this.token==null" (click)="SeConnecter()"><li class="nav-tab">Se Connecter</li></a>
                          <a  class="nav-point" *ngIf=" this.token!=null" (click)="SeDeconnecter()"><li class="nav-tab">Se Deconnecter</li></a>{{this.user}}
-
+                        
             </ul>
           </nav>
         </main>

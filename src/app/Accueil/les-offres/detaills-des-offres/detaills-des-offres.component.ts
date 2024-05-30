@@ -10,10 +10,12 @@ import { Router } from '@angular/router';
   styleUrl: './detaills-des-offres.component.scss'
 })
 export class DetaillsDesOffresComponent implements OnInit {
-  token: string | null | undefined;
-closeAlert() {
-throw new Error('Method not implemented.');
+contacter() {
+  this.router.navigate(["/EduXcellence/Contact"])
+  this.dialogRef.close()
 }
+  token: string | null | undefined;
+
   id: any;
   user: any;
 messagesuccess: any;

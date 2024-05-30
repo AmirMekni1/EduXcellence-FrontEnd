@@ -6,15 +6,13 @@ import { ContactComponent } from '../contact/contact.component';
 import { ProposComponent } from '../propos/propos.component';
 
 const routes: Routes = [
-
   { path: "404", component: PageDErreurDeConnexionComponent },
-  { path: "DetailsOffres", component: DetaillsDesOffresComponent },
-  {path:"Contact", component:ContactComponent},
-  {path:"propos", component:ProposComponent}
+    {path:"Contact", component:ContactComponent},
+    {path:"Propos", component:ProposComponent}
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class ElementsSupplementairesRoutingModule { }
+export class ElementSupplementaireRoutingModule { }

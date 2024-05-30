@@ -1,0 +1,57 @@
+:host { 
+    display: contents; 
+  }
+  .home-container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: flex-end;
+    padding-top: 0px;
+    padding-left: 300px;
+    padding-right: 300px;
+    flex-direction: column;
+    padding-bottom: 0px;
+    justify-content: flex-start;
+    background-image: url('Untitled.png');
+  }
+  .home-text {
+    font-size: 40px;
+    margin-top: 14%;
+    text-align: left;
+    margin-right: 29.8%;
+    margin-bottom: 1.5%;
+  }
+  .home-textinput {
+    width: 500px;
+    padding: var(--dl-space-space-oneandhalfunits);
+    margin-top: 0%;
+    margin-right: 10%;
+    margin-bottom: 1%;
+  }
+  .home-image {
+    top: 346px;
+    left: 15%;
+    width: 300px;
+    margin: auto;
+    position: absolute;
+    object-fit: cover;
+  }
+  .home-textarea {
+    width: 500px;
+    height: 400px;
+    padding: var(--dl-space-space-oneandhalfunits);
+    margin-right: 10%;
+    margin-bottom: 1%;
+  }
+  .home-text3 {
+    top: 609px;
+    left: 26%;
+    color: rgb(0, 218, 255);
+    position: absolute;
+    font-size: 30px;
+  }
+  .home-button {
+    margin-right: 41.4%;
+  }
+  

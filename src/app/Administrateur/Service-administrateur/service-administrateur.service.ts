@@ -144,5 +144,24 @@ return this.http.get("http://localhost:8080/apiAdmin/formateursDisponibles",{hea
     return this.http.post("http://localhost:8080/apiAdmin/planifierFormation",formdata,{headers});
   }
 
+  NombreDeParticipants(token:any){
+    const headers = new HttpHeaders().set('token', `${token}`);
+    return this.http.get("http://localhost:8080/apiAdmin/NombreDeParticipants",{headers});
+  }
+
+  NombreDeFormateurs(token:any){
+    const headers = new HttpHeaders().set('token', `${token}`);
+    return this.http.get("http://localhost:8080/apiAdmin/NombreDeFormateurs",{headers});
+  }
+
+  NombreParticipantsVerifies(token:any){
+    const headers = new HttpHeaders().set('token', `${token}`);
+    return this.http.get("http://localhost:8080/apiAdmin/NombreParticipantsVerifies",{headers});
+  }
+  
+  NombreParticipantsNonVerifies(token:any){
+    const headers = new HttpHeaders().set('token', `${token}`);
+    return this.http.get("http://localhost:8080/apiAdmin/NombreParticipantsNonVerifies",{headers});
+  }
 
 }

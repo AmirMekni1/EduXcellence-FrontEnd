@@ -1418,102 +1418,17 @@ img1 {
 	border-bottom-right-radius: 0px;
 }
 
-.p2 {
+p {
+	background: linear-gradient(to right, red, yellow, green, blue, indigo, violet);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: rgb(240, 105, 190);
+	display: inline-block;
+	font-family: OpenSans, Arial, sans-serif;
+}
+
+div .boxtext {
 	/* Font & Text */
-	font-family: "Source Sans Pro", Arial, sans-serif;
-	font-size: 16px;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 400;
-	letter-spacing: normal;
-	line-height: 24px;
-	text-decoration: none solid rgb(31, 31, 31);
-	text-align: center;
-	text-indent: 0px;
-	text-transform: none;
-	vertical-align: baseline;
-	white-space: normal;
-	word-spacing: 0px;
-
-	/* Color & Background */
-	background-attachment: scroll;
-	background-color: rgba(0, 0, 0, 0);
-	background-image: none;
-	background-position: 0% 0%;
-	background-repeat: repeat;
-	color: rgb(31, 31, 31);
-
-	/* Box */
-	height: 96px;
-	width: 264px;
-	border: 0px none rgb(31, 31, 31);
-	border-top: 0px none rgb(31, 31, 31);
-	border-right: 0px none rgb(31, 31, 31);
-	border-bottom: 0px none rgb(31, 31, 31);
-	border-left: 0px none rgb(31, 31, 31);
-	margin: 0px;
-	padding: 0px;
-	max-height: none;
-	min-height: 0px;
-	max-width: 100%;
-	min-width: 0px;
-
-	/* Positioning */
-	position: static;
-	top: auto;
-	bottom: auto;
-	right: auto;
-	left: auto;
-	float: none;
-	display: block;
-	clear: none;
-	z-index: auto;
-
-	/* List */
-	list-style-image: none;
-	list-style-type: disc;
-	list-style-position: outside;
-
-	/* Table */
-	border-collapse: separate;
-	border-spacing: 0px 0px;
-	caption-side: top;
-	empty-cells: show;
-	table-layout: auto;
-
-	/* Miscellaneous */
-	overflow: visible;
-	cursor: auto;
-	visibility: visible;
-
-	/* Effects */
-	transform: none;
-	transition: all 0s ease 0s;
-	outline-offset: 0px;
-	box-sizing: border-box;
-	resize: none;
-	text-shadow: none;
-	text-overflow: clip;
-	word-wrap: normal;
-	box-shadow: none;
-	border-top-left-radius: 0px;
-	border-top-right-radius: 0px;
-	border-bottom-left-radius: 0px;
-	border-bottom-right-radius: 0px;
-}
-
-.bbd {
-	display: inline-flex;
-}
-
-.ligne {
-	width: 95%;
-	margin: 2.2% auto 0px auto;
-
-}
-
-.p3b0 {
-	/*Font&Text*/
 	font-family: OpenSans, Arial, sans-serif;
 	font-size: 14px;
 	font-style: normal;
@@ -1528,30 +1443,319 @@ img1 {
 	vertical-align: baseline;
 	white-space: normal;
 	word-spacing: 0px;
-	/*Color&Background*/
+
+	/* Color & Background */
 	background-attachment: scroll;
-	background-color: rgba(39, 16, 102, 0.808);
+	background-color: rgba(0, 0, 0, 0);
 	background-image: none;
 	background-position: 0% 0%;
 	background-repeat: repeat;
 	color: rgb(55, 58, 60);
-	/*Box*/
-	height: 374px;
-	width: 95%;
+
+	/* Box */
+	height: 160.75px;
+	width: 652px;
 	border: 0px none rgb(55, 58, 60);
 	border-top: 0px none rgb(55, 58, 60);
 	border-right: 0px none rgb(55, 58, 60);
 	border-bottom: 0px none rgb(55, 58, 60);
 	border-left: 0px none rgb(55, 58, 60);
-	margin: 5px auto 20px auto;
-	padding: 0px 24px;
+	margin: 0px;
+	padding: 0px;
+	max-height: none;
+	min-height: auto;
+	max-width: none;
+	min-width: auto;
+
+	/* Positioning */
+	position: static;
+	top: auto;
+	bottom: auto;
+	right: auto;
+	left: auto;
+	float: none;
+	display: block;
+	clear: none;
+	z-index: auto;
+
+	/* List */
+	list-style-image: none;
+	list-style-type: disc;
+	list-style-position: outside;
+
+	/* Table */
+	border-collapse: separate;
+	border-spacing: 0px 0px;
+	caption-side: top;
+	empty-cells: show;
+	table-layout: auto;
+
+	/* Miscellaneous */
+	overflow: visible;
+	cursor: auto;
+	visibility: visible;
+
+	/* Effects */
+	transform: none;
+	transition: all 0s ease 0s;
+	outline-offset: 0px;
+	box-sizing: border-box;
+	resize: none;
+	text-shadow: none;
+	text-overflow: clip;
+	word-wrap: normal;
+	box-shadow: none;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+
+._u39gw4 {
+	/* Font & Text */
+	font-family: "Source Sans Pro", Arial, sans-serif;
+	font-size: 19px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	letter-spacing: normal;
+	line-height: 34.2px;
+	text-decoration: none solid rgb(55, 58, 60);
+	text-align: center;
+	text-indent: 0px;
+	text-transform: none;
+	vertical-align: baseline;
+	white-space: normal;
+	word-spacing: 0px;
+
+
+	/* Color & Background */
+	background-attachment: scroll;
+	background-color: rgba(0, 0, 0, 0);
+	background-image: none;
+	background-position: 0% 0%;
+	background-repeat: repeat;
+	color: rgb(55, 58, 60);
+
+	/* Box */
+	height: 140.75px;
+	width: 852px;
+	border: 0px none rgb(55, 58, 60);
+	border-top: 0px none rgb(55, 58, 60);
+	border-right: 0px none rgb(55, 58, 60);
+	border-bottom: 0px none rgb(55, 58, 60);
+	border-left: 0px none rgb(55, 58, 60);
+	margin: -25px 0px 20px;
+	padding: 0px;
 	max-height: none;
 	min-height: 0px;
 	max-width: none;
 	min-width: 0px;
-	border-radius: 20px;
 
-	/*Positioning*/
+
+	/* Positioning */
+	position: static;
+	top: auto;
+	bottom: auto;
+	right: auto;
+	left: auto;
+	float: none;
+	display: block;
+	clear: none;
+	z-index: auto;
+
+	/* List */
+	list-style-image: none;
+	list-style-type: disc;
+	list-style-position: outside;
+
+	/* Table */
+	border-collapse: separate;
+	border-spacing: 0px 0px;
+	caption-side: top;
+	empty-cells: show;
+	table-layout: auto;
+
+	/* Miscellaneous */
+	overflow: visible;
+	cursor: auto;
+	visibility: visible;
+
+	/* Effects */
+	transform: none;
+	transition: all 0s ease 0s;
+	outline-offset: 0px;
+	box-sizing: border-box;
+	resize: none;
+	text-shadow: none;
+	text-overflow: clip;
+	word-wrap: break-word;
+	box-shadow: none;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+.paragraphe {
+	display: block;
+	margin: auto;
+	text-align: center;
+	font-size: 20px;
+	font-family: OpenSans, Arial, sans-serif;
+}
+
+.boxblue {
+	margin: 0px auto 10px auto;
+	background-color: rgb(219, 238, 246);
+	height: 47.5%;
+	margin-top: 5%;
+	clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
+	width: 95%;
+	-webkit-border-radius: 20px 20px 20px 20px;
+	border-radius: 20px 20px 20px 20px;
+	-moz-border-radius: 20px 20px 20px 20px;
+	-ms-border-radius: 20px 20px 20px 20px;
+	-o-border-radius: 20px 20px 20px 20px;
+}
+
+.text-focus-in {
+	-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 0.1s both;
+	animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 0.1s both;
+	height: 70px;
+	font-family: "Source Sans Pro", Arial, sans-serif;
+	font-weight: 500;
+	font-size: 40px;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2024-3-29 20:40:27
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation text-focus-in
+ * ----------------------------------------
+ */
+@-webkit-keyframes text-focus-in {
+
+	0% {
+		-webkit-filter: blur(12px);
+		filter: blur(12px);
+		opacity: 0;
+	}
+
+	100% {
+		-webkit-filter: blur(0px);
+		filter: blur(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes text-focus-in {
+	0% {
+		-webkit-filter: blur(12px);
+		filter: blur(12px);
+		opacity: 0;
+	}
+
+	100% {
+		-webkit-filter: blur(0px);
+		filter: blur(0px);
+		opacity: 1;
+	}
+
+}
+
+.text-focus-in-2 {
+	-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 0.3s both;
+	animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 0.3s both;
+	font-family: "Source Sans Pro", Arial, sans-serif;
+	font-weight: 500;
+	font-size: 40px;
+}
+
+/* ----------------------------------------------
+* Generated by Animista on 2024-3-29 20:40:27
+* Licensed under FreeBSD License.
+* See http://animista.net/license for more info. 
+* w: http://animista.net, t: @cssanimista
+* ---------------------------------------------- */
+
+/**
+* ----------------------------------------
+* animation text-focus-in
+* ----------------------------------------
+*/
+@-webkit-keyframes text-focus-in-2 {
+	0% {
+		-webkit-filter: blur(12px);
+		filter: blur(12px);
+		opacity: 0;
+	}
+
+	100% {
+		-webkit-filter: blur(0px);
+		filter: blur(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes text-focus-in-2 {
+	0% {
+		-webkit-filter: blur(12px);
+		filter: blur(12px);
+		opacity: 0;
+	}
+
+	100% {
+		-webkit-filter: blur(0px);
+		filter: blur(0px);
+		opacity: 1;
+	}
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.img0 {
+	/* Font & Text */
+	font-family: OpenSans, Arial, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	letter-spacing: normal;
+	line-height: 21px;
+	text-decoration: none solid rgb(55, 58, 60);
+	text-align: start;
+	text-indent: 0px;
+	text-transform: none;
+	vertical-align: middle;
+	white-space: normal;
+	word-spacing: 0px;
+
+
+
+	/* Color & Background */
+	background-attachment: scroll;
+	background-color: rgba(0, 0, 0, 0);
+	background-image: none;
+	background-position: 0% 0%;
+	background-repeat: repeat;
+	color: rgb(55, 58, 60);
+
+	/* Box */
+	height: auto;
+	width: 376px;
+	margin-top: 9%;
+	max-height: 429px;
+	max-width: 476px;
+
+	/* Positioning */
 	position: static;
 	top: auto;
 	bottom: auto;
@@ -1561,167 +1765,6 @@ img1 {
 	display: flex;
 	clear: none;
 	z-index: auto;
-	/*List*/
-	list-style-image: none;
-	list-style-type: disc;
-	list-style-position: outside;
-	/*Table*/
-	border-collapse: separate;
-	border-spacing: 0px 0px;
-	caption-side: top;
-	empty-cells: show;
-	table-layout: auto;
-	/*Miscellaneous*/
-	overflow: visible;
-	cursor: auto;
-	visibility: visible;
-	/*Effects*/
-	transform: none;
-	transition: all 0s ease 0s;
-	outline-offset: 0px;
-	box-sizing: border-box;
-	resize: none;
-	text-shadow: none;
-	text-overflow: clip;
-	word-wrap: normal;
-	box-shadow: none;
-	border-top-left-radius: 0px;
-	border-top-right-radius: 0px;
-	border-bottom-left-radius: 0px;
-	border-bottom-right-radius: 0px;
-	-webkit-border-radius: 20px;
-	-moz-border-radius: 20px;
-	-ms-border-radius: 20px;
-	-o-border-radius: 20px;
-}
-
-/*---------------------------------------------------------------------------Cards--------------------------------------------------------------------------------------------------*/
-
-.card {
-    width: 190px;
-    height: 254px;
-    border-radius: 20px;
-    background: #f5f5f5;
-    position: static;
-    padding: 1.8rem;
-    border: 2px solid #c3c6ce;
-    transition: 0.5s ease-out;
-    overflow: visible;
-    margin: 20px;
-   }
-   
-   .card-details {
-    color: black;
-    height: 100%;
-    gap: .5em;
-    display: grid;
-    place-content: center;
-   }
-   
-   .card-button {
-    transform: translate(-50%, 125%);
-    width: 60%;
-    border-radius: 1rem;
-    border: none;
-    background-color: #008bf8;
-    color: #fff;
-    font-size: 1rem;
-    padding: .5rem 1rem;
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    opacity: 0;
-    transition: 0.3s ease-out;
-   }
-   
-   .text-body {
-    color: rgb(134, 134, 134);
-   }
-   
-   /*Text*/
-   .text-title {
-    font-size: 1.5em;
-    font-weight: bold;
-   }
-   
-   /*Hover*/
-   .card:hover {
-    border-color: #008bf8;
-    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
-   }
-   
-   .card:hover .card-button {
-    transform: translate(-50%, 50%);
-    opacity: 1;
-   }
-
-.BlockCards {
-	display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 16px;
-  justify-items: center;
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 16px;
-}
-
-.BEduXcellence2 {
-	color: rgb(255, 255, 255);
-	font-family: "Source Sans Pro", Arial, sans-serif;
-	font-size: 50px;
-	text-align: center;
-}
-
-.p2b2 {
-	/* Font & Text */
-	font-family: OpenSans, Arial, sans-serif;
-	font-size: 14px;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 400;
-	letter-spacing: normal;
-	line-height: 21px;
-	text-decoration: none solid rgb(255, 255, 255);
-	text-align: center;
-	text-indent: 0px;
-	text-transform: none;
-	vertical-align: baseline;
-	white-space: normal;
-	word-spacing: 0px;
-
-	/* Color & Background */
-	background-attachment: scroll;
-	background-color: rgba(0, 0, 0, 0);
-	background-image: none;
-	background-position: 0% 0%;
-	background-repeat: repeat;
-	color: rgb(255, 255, 255);
-
-	/* Box */
-	height: 374px;
-	width: 1152px;
-	border: 0px none rgb(255, 255, 255);
-	border-top: 0px none rgb(255, 255, 255);
-	border-right: 0px none rgb(255, 255, 255);
-	border-bottom: 0px none rgb(255, 255, 255);
-	border-left: 0px none rgb(255, 255, 255);
-	margin: auto;
-	padding: 64px 0px;
-	max-height: none;
-	min-height: auto;
-	max-width: 1152px;
-	min-width: auto;
-
-	/* Positioning */
-	position: static;
-	top: auto;
-	bottom: auto;
-	right: auto;
-	left: auto;
-	float: none;
-	display: block;
-	clear: none;
-	z-index: auto;
 
 	/* List */
 	list-style-image: none;
@@ -1736,7 +1779,7 @@ img1 {
 	table-layout: auto;
 
 	/* Miscellaneous */
-	overflow: visible;
+	overflow: clip;
 	cursor: auto;
 	visibility: visible;
 
@@ -1756,7 +1799,9 @@ img1 {
 	border-bottom-right-radius: 0px;
 }
 
-.p2b3 {
+/*---------------------------------------------------------------------Big-Block-Img--------------------------------------------------------------------------------------------------*/
+
+div .cds-9 css-0 cds-11 cds-grid-item {
 	/* Font & Text */
 	font-family: OpenSans, Arial, sans-serif;
 	font-size: 14px;
@@ -1765,8 +1810,8 @@ img1 {
 	font-weight: 400;
 	letter-spacing: normal;
 	line-height: 21px;
-	text-decoration: none solid rgb(255, 255, 255);
-	text-align: center;
+	text-decoration: none solid rgb(55, 58, 60);
+	text-align: start;
 	text-indent: 0px;
 	text-transform: none;
 	vertical-align: baseline;
@@ -1779,373 +1824,52 @@ img1 {
 	background-image: none;
 	background-position: 0% 0%;
 	background-repeat: repeat;
-	color: rgb(255, 255, 255);
+	color: rgb(55, 58, 60);
 
 	/* Box */
-	height: 48px;
-	width: 768px;
-	border: 0px none rgb(255, 255, 255);
-	border-top: 0px none rgb(255, 255, 255);
-	border-right: 0px none rgb(255, 255, 255);
-	border-bottom: 0px none rgb(255, 255, 255);
-	border-left: 0px none rgb(255, 255, 255);
-	margin: 0px auto 0px auto;
-	padding: 0px;
-	max-height: none;
-	min-height: auto;
-	max-width: 100%;
-	min-width: auto;
-
-	/* Positioning */
-	position: static;
-	top: auto;
-	bottom: auto;
-	right: auto;
-	left: auto;
-	float: none;
-	display: block;
-	clear: none;
-	z-index: auto;
-
-	/* List */
-	list-style-image: none;
-	list-style-type: disc;
-	list-style-position: outside;
-
-	/* Table */
-	border-collapse: separate;
-	border-spacing: 0px 0px;
-	caption-side: top;
-	empty-cells: show;
-	table-layout: auto;
-
-	/* Miscellaneous */
-	overflow: visible;
-	cursor: auto;
-	visibility: visible;
-
-	/* Effects */
-	transform: none;
-	transition: all 0s ease 0s;
-	outline-offset: 0px;
-	box-sizing: border-box;
-	resize: none;
-	text-shadow: none;
-	text-overflow: clip;
-	word-wrap: normal;
-	box-shadow: none;
-	border-top-left-radius: 0px;
-	border-top-right-radius: 0px;
-	border-bottom-left-radius: 0px;
-	border-bottom-right-radius: 0px;
-}
-
-.p2b4 {
-	/* Font & Text */
-	font-family: OpenSans, Arial, sans-serif;
-	font-size: 14px;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 400;
-	letter-spacing: normal;
-	line-height: 21px;
-	text-decoration: none solid rgb(255, 255, 255);
-	text-align: center;
-	text-indent: 0px;
-	text-transform: none;
-	vertical-align: baseline;
-	white-space: normal;
-	word-spacing: 0px;
-
-	/* Color & Background */
-	background-attachment: scroll;
-	background-color: rgba(0, 0, 0, 0);
-	background-image: none;
-	background-position: 0% 0%;
-	background-repeat: repeat;
-	color: rgb(255, 255, 255);
-
-	/* Box */
-	height: 42px;
-	width: 768px;
-	border: 0px none rgb(255, 255, 255);
-	border-top: 0px none rgb(255, 255, 255);
-	border-right: 0px none rgb(255, 255, 255);
-	border-bottom: 0px none rgb(255, 255, 255);
-	border-left: 0px none rgb(255, 255, 255);
-	margin: auto;
-	padding: 0px;
-	max-height: none;
-	min-height: 0px;
-	max-width: none;
-	min-width: 0px;
-
-	/* Positioning */
-	position: static;
-	top: auto;
-	bottom: auto;
-	right: auto;
-	left: auto;
-	float: none;
-	display: block;
-	clear: none;
-	z-index: auto;
-
-	/* List */
-	list-style-image: none;
-	list-style-type: disc;
-	list-style-position: outside;
-
-	/* Table */
-	border-collapse: separate;
-	border-spacing: 0px 0px;
-	caption-side: top;
-	empty-cells: show;
-	table-layout: auto;
-
-	/* Miscellaneous */
-	overflow: visible;
-	cursor: auto;
-	visibility: visible;
-
-	/* Effects */
-	transform: none;
-	transition: all 0s ease 0s;
-	outline-offset: 0px;
-	box-sizing: border-box;
-	resize: none;
-	text-shadow: none;
-	text-overflow: clip;
-	word-wrap: normal;
-	box-shadow: none;
-	border-top-left-radius: 0px;
-	border-top-right-radius: 0px;
-	border-bottom-left-radius: 0px;
-	border-bottom-right-radius: 0px;
-}
-
-.p2b5 {
-	/* Font & Text */
-	font-family: OpenSans, Arial, sans-serif;
-	font-size: 14px;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 400;
-	letter-spacing: normal;
-	line-height: 21px;
-	text-decoration: none solid rgb(255, 255, 255);
-	text-align: center;
-	text-indent: 0px;
-	text-transform: none;
-	vertical-align: baseline;
-	white-space: normal;
-	word-spacing: 0px;
-
-	/* Color & Background */
-	background-attachment: scroll;
-	background-color: rgba(0, 0, 0, 0);
-	background-image: none;
-	background-position: 0% 0%;
-	background-repeat: repeat;
-	color: rgb(255, 255, 255);
-
-	/* Box */
-	height: 21px;
-	width: 768px;
-	border: 0px none rgb(255, 255, 255);
-	border-top: 0px none rgb(255, 255, 255);
-	border-right: 0px none rgb(255, 255, 255);
-	border-bottom: 0px none rgb(255, 255, 255);
-	border-left: 0px none rgb(255, 255, 255);
-	margin: auto;
-	padding: 0px;
-	max-height: none;
-	min-height: 0px;
-	max-width: none;
-	min-width: 0px;
-
-	/* Positioning */
-	position: static;
-	top: auto;
-	bottom: auto;
-	right: auto;
-	left: auto;
-	float: none;
-	display: block;
-	clear: none;
-	z-index: auto;
-
-	/* List */
-	list-style-image: none;
-	list-style-type: disc;
-	list-style-position: outside;
-
-	/* Table */
-	border-collapse: separate;
-	border-spacing: 0px 0px;
-	caption-side: top;
-	empty-cells: show;
-	table-layout: auto;
-
-	/* Miscellaneous */
-	overflow: visible;
-	cursor: auto;
-	visibility: visible;
-
-	/* Effects */
-	transform: none;
-	transition: all 0s ease 0s;
-	outline-offset: 0px;
-	box-sizing: border-box;
-	resize: none;
-	text-shadow: none;
-	text-overflow: clip;
-	word-wrap: normal;
-	box-shadow: none;
-	border-top-left-radius: 0px;
-	border-top-right-radius: 0px;
-	border-bottom-left-radius: 0px;
-	border-bottom-right-radius: 0px;
-}
-
-.p2bb {
-	/*Font&Text*/font-family: "Source Sans Pro", Arial, sans-serif;
-	font-size: 16px;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 600;
-	letter-spacing: 0.16px;
-	line-height: 24px;
-	text-decoration: none solid rgb(255, 255, 255);
-	text-align: center;
-	text-indent: 0px;
-	text-transform: none;
-	vertical-align: middle;
-	white-space: normal;
-	word-spacing: 0px;
-	/*Color&Background*/background-attachment: scroll;
-	background-color: rgb(0, 65, 158);
-	background-image: none;
-	background-position: 0% 0%;
-	background-repeat: repeat;
-	color: rgb(255, 255, 255);
-	/*Box*/height: 72px;
-	width: 320px;
-	border: 0px none rgb(0, 65, 158);
-	border-top: 0px none rgb(0, 65, 158);
-	border-right: 0px none rgb(0, 65, 158);
-	border-bottom: 0px none rgb(0, 65, 158);
-	border-left: 0px none rgb(0, 65, 158);
-	margin: 10% auto 0px auto;
-	padding: 25px 32px;
-	max-height: none;
-	min-height: 0px;
-	max-width: 320px;
-	min-width: 0px;
-	/*Positioning*/position: relative;
-	top: 0px;
-	bottom: 0px;
-	right: 0px;
-	left: 0px;
-	float: none;
-	display: inline-flex;
-	clear: none;
-	z-index: auto;
-	border-radius: 15px;
-	/*List*/list-style-image: none;
-	list-style-type: disc;
-	list-style-position: outside;
-	/*Table*/border-collapse: separate;
-	border-spacing: 0px 0px;
-	caption-side: top;
-	empty-cells: show;
-	table-layout: auto;
-	/*Miscellaneous*/overflow: visible;
-	cursor: pointer;
-	visibility: visible;
-	/*Effects*/transform: none;
-	transition: none 0s ease 0s;
-	outline-offset: 0px;
-	box-sizing: border-box;
-	resize: none;
-	text-shadow: none;
-	text-overflow: clip;
-	word-wrap: normal;
-	box-shadow: rgb(0, 86, 210) 0px 0px 0px 1px inset;
-	border-top-left-radius: 4px;
-	border-top-right-radius: 4px;
-	border-bottom-left-radius: 4px;
-	border-bottom-right-radius: 4px;
-	-webkit-border-radius: 15px;
-	-moz-border-radius: 15px;
-	-ms-border-radius: 15px;
-	-o-border-radius: 15px;
-}
-
-.p2b6 {
-	/*Font&Text*/
-	font-family: "Source Sans Pro", Arial, sans-serif;
-	font-size: 16px;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 600;
-	letter-spacing: 0.16px;
-	line-height: 24px;
-	text-decoration: none solid rgb(255, 255, 255);
-	text-align: center;
-	text-indent: 0px;
-	text-transform: none;
-	vertical-align: baseline;
-	white-space: normal;
-	word-spacing: 0px;
-	/*Color&Background*/
-	background-attachment: scroll;
-	background-color: rgba(0, 0, 0, 0);
-	background-image: none;
-	background-position: 0% 0%;
-	background-repeat: repeat;
-	color: rgb(255, 255, 255);
-	/*Box*/
-	height: 48px;
-	width: 256px;
-	border: 0px none rgb(255, 255, 255);
-	border-top: 0px none rgb(255, 255, 255);
-	border-right: 0px none rgb(255, 255, 255);
-	border-bottom: 0px none rgb(255, 255, 255);
-	border-left: 0px none rgb(255, 255, 255);
-	margin: auto;
-	padding: 0px;
+	height: 461px;
+	width: 508px;
+	border: 0px none rgb(55, 58, 60);
+	border-top: 0px none rgb(55, 58, 60);
+	border-right: 0px none rgb(55, 58, 60);
+	border-bottom: 0px none rgb(55, 58, 60);
+	border-left: 0px none rgb(55, 58, 60);
+	margin-left: 0px;
+	padding: 16px;
 	max-height: none;
 	min-height: auto;
 	max-width: none;
 	min-width: auto;
-	align-items: center;
 
-	/*Positioning*/
-	position: static;
+	/* Positioning */
+	position: absolute;
 	top: auto;
 	bottom: auto;
 	right: auto;
-	left: auto;
+	left: 15%;
 	float: none;
-	display: block;
+	display: inline;
 	clear: none;
 	z-index: auto;
-	/*List*/
+
+	/* List */
 	list-style-image: none;
 	list-style-type: disc;
 	list-style-position: outside;
-	/*Table*/
+
+	/* Table */
 	border-collapse: separate;
 	border-spacing: 0px 0px;
 	caption-side: top;
 	empty-cells: show;
 	table-layout: auto;
-	/*Miscellaneous*/
+
+	/* Miscellaneous */
 	overflow: visible;
-	cursor: pointer;
+	cursor: auto;
 	visibility: visible;
-	/*Effects*/
+
+	/* Effects */
 	transform: none;
 	transition: all 0s ease 0s;
 	outline-offset: 0px;
@@ -2159,66 +1883,4 @@ img1 {
 	border-top-right-radius: 0px;
 	border-bottom-left-radius: 0px;
 	border-bottom-right-radius: 0px;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	-ms-border-radius: 10px;
-	-o-border-radius: 10px;
 }
-
-/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-
-.card {
-    width: 190px;
-    height: 254px;
-    border-radius: 20px;
-    background: #f5f5f5;
-    position: static;
-    padding: 1.8rem;
-    border: 2px solid #c3c6ce;
-    transition: 0.5s ease-out;
-    overflow: visible;
-    margin: 20px;
-   }
-   
-   .card-details {
-    color: black;
-    height: 100%;
-    gap: .5em;
-    display: grid;
-    place-content: center;
-   }
-   
-   .card-button {
-    transform: translate(-50%, 125%);
-    width: 100%;
-    border-radius: 1rem;
-    border: none;
-    background-color: #008bf8;
-    color: #fff;
-    font-size: 1rem;
-    padding: .5rem 1rem;
-    position: relative;
-    opacity: 0;
-    transition: 0.3s ease-out;
-   }
-   
-   .text-body {
-    color: rgb(134, 134, 134);
-   }
-   
-   /*Text*/
-   .text-title {
-    font-size: 1.5em;
-    font-weight: bold;
-   }
-   
-   /*Hover*/
-   .card:hover {
-    border-color: #008bf8;
-    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
-   }
-   
-   .card:hover .card-button {
-    transform: translate(-50%, 50%);
-    opacity: 1;
-   }

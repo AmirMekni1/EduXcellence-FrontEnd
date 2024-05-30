@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { Page404Component } from './Éléments supplémentaires/page-404/page-404.component';
+import { Page404Component } from './elementSupplementaire/page-404/page-404.component';
 import { FooterComponent } from './Accueil/footer/footer.component';
 import { MainComponent } from './Accueil/main/main.component';
 import { CommonModule } from '@angular/common';
@@ -21,7 +21,8 @@ import { MatDialogActions, MatDialogClose, MatDialogContent, MatDialogTitle } fr
 import { HttpClientModule } from '@angular/common/http';
 
 import { MenubarModule } from 'primeng/menubar';
-import { ElementsSupplementairesModule } from './Éléments supplémentaires/elements-supplementaires/elements-supplementaires.module';
+import { ElementSupplementaireModule } from './elementSupplementaire/element-supplementaire/element-supplementaire.module';
+import { DetaillsDesOffresComponent } from './Accueil/les-offres/detaills-des-offres/detaills-des-offres.component';
 
 @NgModule({
   declarations: [
@@ -30,8 +31,7 @@ import { ElementsSupplementairesModule } from './Éléments supplémentaires/ele
     HeaderComponent,
     MainComponent,
     FooterComponent,
-    
-    
+    DetaillsDesOffresComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,7 +41,7 @@ import { ElementsSupplementairesModule } from './Éléments supplémentaires/ele
     ModuleAdministrateurModule,
     ModuleFormateurModule,
     ModuleParticipantModule,
-    ElementsSupplementairesModule,
+    ElementSupplementaireModule,
     MatProgressBarModule,
     MatInputModule, 
     FormsModule, 
@@ -51,7 +51,7 @@ import { ElementsSupplementairesModule } from './Éléments supplémentaires/ele
     MatDialogActions,
     MatDialogClose,
     HttpClientModule,
-    MenubarModule,
+    MenubarModule
      
   
   ],

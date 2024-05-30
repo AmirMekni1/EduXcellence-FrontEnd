@@ -22,8 +22,8 @@
 <mat-dialog-actions align="end">
   <mat-dialog-actions align="end">
     <button mat-button mat-dialog-close>Annuler</button>
-    <button mat-button (click)="InscriptionAuCours()" cdkFocusInitial *ngIf="this.user=='Participant' || this.token==null ">S'inscrire au cours</button>
-    <button mat-button (click)="InscriptionAuCours()" cdkFocusInitial *ngIf="this.user=='Formateur' ">Contacter Avec L'admin</button>
+    <button mat-button (click)="InscriptionAuCours()"   *ngIf="this.user=='Participant' || this.token==null ">S'inscrire au cours</button>
+    <button mat-button (click)="contacter()"  *ngIf="this.user!='Participant' ">Contacter L'admin</button>
   </mat-dialog-actions>
 
 
@@ -51,7 +51,7 @@
       >
         <path
           d="m15.8333 5.34166-1.175-1.175-4.6583 4.65834-4.65833-4.65834-1.175 1.175 4.65833 4.65834-4.65833 4.6583 1.175 1.175 4.65833-4.6583 4.6583 4.6583 1.175-1.175-4.6583-4.6583z"
-          class="close-path" (click)="closeAlert()"
+          class="close-path" 
         ></path>
       </svg>
     </div>
@@ -83,7 +83,7 @@
       >
         <path
           d="m15.8333 5.34166-1.175-1.175-4.6583 4.65834-4.65833-4.65834-1.175 1.175 4.65833 4.65834-4.65833 4.6583 1.175 1.175 4.65833-4.6583 4.6583 4.6583 1.175-1.175-4.6583-4.6583z"
-          class="close-path" (click)="closeAlert()"
+          class="close-path" 
         ></path>
       </svg>
     </div>
@@ -114,7 +114,7 @@
       >
         <path
           d="m15.8333 5.34166-1.175-1.175-4.6583 4.65834-4.65833-4.65834-1.175 1.175 4.65833 4.65834-4.65833 4.6583 1.175 1.175 4.65833-4.6583 4.6583 4.6583 1.175-1.175-4.6583-4.6583z"
-          class="close-path"  (click)="closeAlert()"
+          class="close-path"  
         ></path>
       </svg>
     </div>
