@@ -14,8 +14,6 @@ import { FileUploadModule } from 'primeng/fileupload';
 
 import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
-import { ProfileComponent } from '../profile/profile.component';
-import { ModifierProfileComponent } from '../profile/modifier-profile/modifier-profile.component';
 import { ProgrammeComponent } from '../contenuDeFormation/programme/programme.component';
 import { LienEvaluationComponent } from '../contenuDeFormation/lien-evaluation/lien-evaluation.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
@@ -25,13 +23,12 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSelectModule } from '@angular/material/select';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     MesModulesComponent,
     AjouterModuleComponent,
-    ProfileComponent,
-    ModifierProfileComponent,
     ProgrammeComponent,
     LienEvaluationComponent,
   ],
@@ -52,19 +49,13 @@ import { MatSelectModule } from '@angular/material/select';
     ReactiveFormsModule,
     MatDatepickerModule,
     MatCardModule,
-    MatIconModule,
-    MatDividerModule,
-    MatButtonModule,
-    MatFormFieldModule, 
-    MatInputModule, 
     MatTableModule, 
     MatSortModule, 
     MatPaginatorModule, 
     MatDialogModule,
-    ReactiveFormsModule,
-    FileUploadModule,
     MatSelectModule,
-    MatExpansionModule
+    MatExpansionModule,
+    HttpClientModule
   ]
 })
 export class ModuleFormateurModule { }

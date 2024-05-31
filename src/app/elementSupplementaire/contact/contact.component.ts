@@ -12,11 +12,13 @@ export class ContactComponent implements OnInit {
 Contenu: any;
 Sujet: any;
 Email: any;
-token = localStorage.getItem('token') ;
+  token: any;
+
 
 constructor(private _service:ErviceelementsupplementaireService,private _serviceparticipant:ServiceParticipantService){}
 
   ngOnInit(): void {
+    this.token = localStorage.getItem('token') ;
       this._serviceparticipant.RecupererId(this.token).subscribe((data:any)=>{
   this.Email=data.email
   console.log(this.Email)

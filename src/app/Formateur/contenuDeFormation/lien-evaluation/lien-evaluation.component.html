@@ -4,30 +4,16 @@
     <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
     <mat-form-field class="example-full-width" style="width: 500px; border-radius: 50%; display: block; margin: 0 auto;">
       <mat-label>Entrer un lien d'évaluation</mat-label>
-      <input type="text" matInput [formControl]="inputFormControl1" [errorStateMatcher]="matcher" [(ngModel)]="themedeformation"
-             name="themedeformation" placeholder="xx-xxx-xxx">
+      <input type="text" matInput  [(ngModel)]="lienEvaluation"
+             name="lienEvaluation" placeholder="xx-xxx-xxx">
     </mat-form-field>
-    <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-
-    <mat-form-field class="example-full-width" style="width: 500px; border-radius: 50%; display: block; margin: 0 auto;">
-      <mat-label>Description</mat-label>
-      <textarea matInput placeholder="xx xxx xxxx..." [(ngModel)]="Description" name="description"></textarea>
-    </mat-form-field>
-
-    <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-
-    <mat-form-field class="example-full-width" style="width: 500px; border-radius: 50%; display: block; margin: 0 auto;">
-      <mat-label>Prix</mat-label>
-      <input matInput placeholder="xx xxx xx" [(ngModel)]="Prix" name="prix">
-    </mat-form-field>
-
     <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
     <mat-form-field style="width: 500px; border-radius: 50%; display: block; margin: 0 auto;">
-      <mat-label>Choisir une date d'évaluation</mat-label>
-      <input matInput [matDatepicker]="datedefin" [formControl]="inputFormControl4" [errorStateMatcher]="matcher" [(ngModel)]="datefin" name="datefin"> 
+      <mat-label>Choisir une date de debut</mat-label>
+      <input matInput [matDatepicker]="datededebut" [formControl]="inputFormControl3" [errorStateMatcher]="matcher" [(ngModel)]="dateEvaluation" name="dateEvaluation">
       <mat-hint>MM/DD/YYYY</mat-hint>
-      <mat-datepicker-toggle matIconSuffix [for]="datedefin"></mat-datepicker-toggle>
-      <mat-datepicker #datedefin></mat-datepicker>
+      <mat-datepicker-toggle matIconSuffix [for]="datededebut"></mat-datepicker-toggle>
+      <mat-datepicker #datededebut></mat-datepicker>
     </mat-form-field>
     <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
     <div class="popup success-popup" *ngIf="messagesuccess" style="position: fixed; top: 80px; right: 20px; width: auto;" aria-hidden="true">
@@ -128,5 +114,5 @@
 </mat-dialog-content>
 <mat-dialog-actions align="end">
   <button mat-button mat-dialog-close>Annuler</button>
-  <button mat-button cdkFocusInitial (click)="AjouterUneNouvelleFormation()">Ok</button>
+  <button mat-button cdkFocusInitial (click)="AjouterUneNouvelleEvaluation()">Ok</button>
 </mat-dialog-actions>

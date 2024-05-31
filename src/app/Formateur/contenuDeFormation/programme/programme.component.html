@@ -1,15 +1,15 @@
 
 <div class="home-container">
-    <span class="home-text">Thème de formation: </span>
+    <span class="home-text">{{this.themedeformation}}</span>
     <div class="home-container1">
       <span class="home-text01">Date de fin: </span>
-      <span class="home-text02">Lien dévaluation: </span>
-      <span class="home-text03">Text</span>
-      <span class="home-text04">Text</span>
-      <span class="home-text05">Text</span>
+      <span class="home-text02">Lien d'évaluation: </span>
+      <span class="home-text03">{{datefin}}</span>
+      <span class="home-text04">{{dateEvaluation}}</span>
+      <span class="home-text05">{{url}}<a href="{{this.url}}" target="_blank">{{this.url}}Cliquez ici</a></span>
       <span class="home-text06">Date de début: </span>
-      <span class="home-text07">Text</span>
-      <button type="button" class="home-button button" (click)="ajouterEvaluation()">
+      <span class="home-text07">{{datedebut}}</span>
+      <button type="button" class="home-button button" (click)="ajouterEvaluation()" *ngIf="url==''">
         Créer une nouvelle évaluation
       </button>
       <button type="button" class="home-button1 button" (click)="ajouterChapitre()">
