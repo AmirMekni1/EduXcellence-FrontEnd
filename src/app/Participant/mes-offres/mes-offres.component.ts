@@ -10,6 +10,7 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrl: './mes-offres.component.scss'
 })
 export class MesOffresComponent implements OnInit {
+
 listeFormations: any;
   
 
@@ -34,11 +35,16 @@ listeFormations: any;
 
     openDialog(x:any) {
      console.log(x) 
-      this._service.SetIDF(x)
+     
       const dialogRef = this.dialog.open(DetaillsDesOffresComponent,{width:'500px'});
       dialogRef.afterClosed().subscribe((result: any) => {
         console.log(`Dialog result: ${result}`);
       });
     }
+
+  setidFormation(x: any,y:any) {
+     this._service.SetIDF(x)
+     this._service.SetIDFormateur(y)
+}
 
 }

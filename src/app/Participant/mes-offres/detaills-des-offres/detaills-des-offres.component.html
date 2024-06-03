@@ -1,29 +1,32 @@
-<h2 mat-dialog-title>{{UneFormation.themeFormation}}</h2>
-
-<mat-dialog-content>
-  <mat-form-field class="example-full-width" style="width: 450px; border-radius: 50%; display: block; margin: 0 auto;">
-  <mat-label>Description :</mat-label>
-    <input type="text" matInput disabled  value={{UneFormation.desciption}} >
-  </mat-form-field>
- 
-  <mat-form-field class="example-full-width" style="width: 450px; border-radius: 50%; display: block; margin: 0 auto;">
-    <mat-label>Prix :</mat-label>
-    <input type="text" matInput disabled  value={{UneFormation.prix}} >
-  </mat-form-field>
-  <mat-form-field class="example-full-width" style="width: 450px; border-radius: 50%; display: block; margin: 0 auto;">
-    <mat-label>Date De Debut :</mat-label>
-    <input type="text" matInput disabled  value={{DD}} >
-  </mat-form-field>
-  <mat-form-field class="example-full-width" style="width: 450px; border-radius: 50%; display: block; margin: 0 auto;">
-    <mat-label>Date De Fin :</mat-label>
-    <input type="text" matInput disabled  value={{DF}} >
-  </mat-form-field>
-</mat-dialog-content>
-<mat-dialog-actions align="end">
-  <mat-dialog-actions align="end">
-    <button mat-button mat-dialog-close>Annuler</button>
-      <button mat-button [mat-dialog-close]="" cdkFocusInitial>Ok</button>
-  </mat-dialog-actions>
-
-
- 
+<div class="home-container">
+  <span class="home-text">{{themedeformation}}</span>
+  <div class="home-container1">
+    <span class="home-text01">Date de fin: </span>
+    <span class="home-text02">Lien d'évaluation: </span>
+    <span class="home-text03">{{ datefin }}</span>
+    <span class="home-text04">{{ dateEvaluation }}</span>
+    <span class="home-text05">
+      <a href="{{ url }}" target="_blank">Cliquez ici</a>
+    </span>
+    <span class="home-text06">Date de début: </span>
+    <span class="home-text07">{{ datedebut }}</span>
+    <button type="button" class="home-button1 button" (click)="downloadPdf()">
+      Telecharger Attestation
+    </button>
+    <img src="/assets/freelancer-400h.gif" alt="image" class="home-image" />
+    <span class="home-text08" *ngIf="dateEvaluation?.length > 0">Date d'évaluation: </span>
+  </div>
+  <div class="home-container2">
+    <div class="home-container3" *ngFor="let programme of listeprogramme">
+      <div class="programme-item">
+        {{ programme }}
+        <button
+          style="border-radius: 10px; background-color: white; border: solid white;"
+          (click)="getFileFormation(programme)"
+        >
+          Consulter
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -50,6 +50,12 @@ messageerror: any;
         this.messagesuccess="";
         window.location.reload()
       }, 2500);
+    
+    },()=>{
+      this.messageerror="Aucun participant inscrit dans cette formation";
+      setTimeout(() => {
+        this.messageerror="";
+      }, 2500);
     })
   }
 }

@@ -13,7 +13,7 @@ export class ServiceParticipantService implements OnInit {
   
   currentUrl: string | undefined;
   x: any;
- 
+  y: any;
   
   constructor(private http:HttpClient,private router:Router) { }
   ngOnInit(): void {
@@ -43,9 +43,19 @@ export class ServiceParticipantService implements OnInit {
     this.x=id;
   }
   
+  getIDFormateur(){
+    return this.y;
+  }
+  SetIDFormateur(id:any){
+    this.y=id;
+  }
   insererBonDeCommande(token:any,formdata:any){
     const headers = new HttpHeaders().set('token', `${token}`);
     return this.http.post("http://localhost:8080/apiParticipant/insererBonDeCommande",formdata,{headers});
+  }
+
+  downloadAttestation(idformation:any,idparticipant:any) {
+    return  this.http.get(`http://localhost:8080/apiParticipant/certification/`+idformation+"/"+idparticipant,{responseType: 'arraybuffer'});
   }
 
 }

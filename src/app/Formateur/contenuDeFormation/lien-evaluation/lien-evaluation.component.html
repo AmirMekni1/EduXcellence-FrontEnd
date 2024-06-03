@@ -8,12 +8,10 @@
              name="lienEvaluation" placeholder="xx-xxx-xxx">
     </mat-form-field>
     <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-    <mat-form-field style="width: 500px; border-radius: 50%; display: block; margin: 0 auto;">
-      <mat-label>Choisir une date de debut</mat-label>
-      <input matInput [matDatepicker]="datededebut" [formControl]="inputFormControl3" [errorStateMatcher]="matcher" [(ngModel)]="dateEvaluation" name="dateEvaluation">
-      <mat-hint>MM/DD/YYYY</mat-hint>
-      <mat-datepicker-toggle matIconSuffix [for]="datededebut"></mat-datepicker-toggle>
-      <mat-datepicker #datededebut></mat-datepicker>
+    <mat-form-field class="example-full-width" style="width: 500px; border-radius: 50%; display: block; margin: 0 auto;">
+      <mat-label>Entrer Date d'évaluation</mat-label>
+      <input type="text" matInput  [(ngModel)]="dateEvaluation"
+             name="dateEvaluation" placeholder="xx-xxx-xxx">
     </mat-form-field>
     <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
     <div class="popup success-popup" *ngIf="messagesuccess" style="position: fixed; top: 80px; right: 20px; width: auto;" aria-hidden="true">

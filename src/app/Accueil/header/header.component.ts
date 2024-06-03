@@ -3,6 +3,8 @@ import { ServiceAuthentificationService } from '../../Authentification/Service/s
 import { NavigationEnd, Router } from '@angular/router';
 import { ServiceParticipantService } from '../../Participant/Service-participant/service-participant.service';
 import { Subscription, filter } from 'rxjs';
+import { DeconnexionComponent } from '../deconnexion/deconnexion.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-header',
@@ -18,21 +20,22 @@ token: any ;
   user: any;
   currentUrl: string | undefined;
 
-constructor(private _service:ServiceAuthentificationService,private router:Router, private _serviceParticipant:ServiceParticipantService){
+constructor(private _service:ServiceAuthentificationService,private router:Router, private _serviceParticipant:ServiceParticipantService,public dialog: MatDialog){
   this.token = localStorage.getItem('token');
 }
   ngOnChanges(token: SimpleChanges): void {
     confirm('ok')
   }
 
-SeDeconnecter(){
-localStorage.clear()
-const verif = confirm('Are you Sure ?')
-if (verif) {
-  window.location.reload()
-this.router.navigate(["/"])
-}
-}
+  openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
+    this.dialog.open(DeconnexionComponent, {
+      width: '250px',
+      enterAnimationDuration,
+      exitAnimationDuration,
+    });
+  }
+
+
 
 SeConnecter() {
   this.router.navigate(["/Authentification/EduXcellence"])

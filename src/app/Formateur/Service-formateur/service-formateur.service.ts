@@ -37,5 +37,19 @@ export class ServiceFormateurService {
     const headers = new HttpHeaders().set('token', `${token}`);
     return this.http.post("http://localhost:8080/apiFormateur/listerUneEvaluation",formdata,{headers});
   }
+
+  insererleProgramme(token:any,formdata:any){
+    const headers = new HttpHeaders().set('token', `${token}`);
+    return this.http.post("http://localhost:8080/apiFormateur/insererleProgramme",formdata,{headers});
+  }
+
+  getFilesByFormationId(token:any,formdata:any){
+    const headers = new HttpHeaders().set('token', `${token}`);
+    return this.http.post(`http://localhost:8080/apiFormateur/getFilesByFormationId`,formdata,{headers});
+  }
+  
+  getFileFormation(x: any, y: any, z: any) {
+    return this.http.get(`http://localhost:8080/apiFormateur/openPdf/${x}/${y}/${z}`, { observe: 'response', responseType: 'arraybuffer' });
+  }
   
 }

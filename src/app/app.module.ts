@@ -23,6 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MenubarModule } from 'primeng/menubar';
 import { ElementSupplementaireModule } from './elementSupplementaire/element-supplementaire/element-supplementaire.module';
 import { DetaillsDesOffresComponent } from './Accueil/les-offres/detaills-des-offres/detaills-des-offres.component';
+import { DeconnexionComponent } from './Accueil/deconnexion/deconnexion.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { DetaillsDesOffresComponent } from './Accueil/les-offres/detaills-des-of
     MainComponent,
     FooterComponent,
     DetaillsDesOffresComponent,
+    DeconnexionComponent,
   ],
   imports: [
     BrowserModule,

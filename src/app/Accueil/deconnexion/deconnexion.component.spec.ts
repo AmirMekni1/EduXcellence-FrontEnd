@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ModifierProfileComponent } from './modifier-profile.component';
+import { DeconnexionComponent } from './deconnexion.component';
 
-describe('ModifierProfileComponent', () => {
-  let component: ModifierProfileComponent;
-  let fixture: ComponentFixture<ModifierProfileComponent>;
+describe('DeconnexionComponent', () => {
+  let component: DeconnexionComponent;
+  let fixture: ComponentFixture<DeconnexionComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ModifierProfileComponent]
+      declarations: [DeconnexionComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(ModifierProfileComponent);
+    fixture = TestBed.createComponent(DeconnexionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
