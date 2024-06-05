@@ -33,28 +33,28 @@ InscriptionParticipant(){
     this.NomPrenomTouched = true;
     setTimeout(() => {
       this.NomPrenomTouched = false;
-    }, 2500);
+    }, 3500);
     return;
   }
   if (!this.Email) {
     this.EmailTouched = true;
     setTimeout(() => {
       this.EmailTouched = false;
-    }, 2500);
+    }, 3500);
     return;
   }
   if (!this.MotDePasse) {
     this.MotDePasseTouched = true;
     setTimeout(() => {
       this.MotDePasseTouched = false;
-    }, 2500);
+    }, 3500);
     return;
   }
   if (!this.Niveaudetude) {
     this.NiveauDetudeTouched = true;
     setTimeout(() => {
       this.NiveauDetudeTouched = false;
-    }, 2500);
+    }, 3500);
     return;
   }
   let formdata = new FormData();
@@ -68,18 +68,18 @@ InscriptionParticipant(){
         this.messagesuccess=data.Message;
         setTimeout(() => {
           this.router.navigate(["/Authentification/Connexion/Participant"]);
-        }, 2500); 
+        }, 3500); 
     }else if (data.Message=="Email existe Déjà"){
       this.messageerror=data.Message;}
       setTimeout(() => {
         this.messageerror  = "";
-      }, 2500); 
+      }, 3500); 
     },
     (error) => {
       this.messageerror=error.Message;
       setTimeout(() => {
         this.messageerror  = "";
-      }, 2500); 
+      }, 3500); 
     }
   );
 }

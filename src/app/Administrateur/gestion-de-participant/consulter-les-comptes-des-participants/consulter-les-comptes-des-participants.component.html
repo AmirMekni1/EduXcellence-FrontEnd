@@ -47,13 +47,7 @@
             <td mat-cell *matCellDef="let row"> {{row.nomPrenom}} </td>
           </ng-container>
       
-          <ng-container matColumnDef="optioncompte" >
-            <th mat-header-cell *matHeaderCellDef mat-sort-header> Vérification du Compte </th>
-            <td mat-cell *matCellDef="let row" >
-              <button mat-stroked-button color="primary" (click)="VerifierCompteParticipant(row.id)" *ngIf="row.verification==false">Verifier compte</button>
-              <span *ngIf="row.verification==true">Compte de Participant est  vérifié</span>
-              </td>
-          </ng-container>
+         
 
       
           <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

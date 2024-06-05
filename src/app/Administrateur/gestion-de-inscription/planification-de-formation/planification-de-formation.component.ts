@@ -45,17 +45,23 @@ messageerror: any;
     formdata.append('formationId', this.Formationid)
     formdata.append('formateurId', this.Formateurid)
     this._service.planifierFormation(localStorage.getItem("token"),formdata).subscribe((data:any)=>{
+      if (data.Message="Il doit y avoir au moins 3 inscriptions"){
+        this.messageerror=data.Message
+        setTimeout(() => {
+          this.messageerror="";
+        }, 3500);
+      }else{
       this.messagesuccess=data.Message;
       setTimeout(() => {
         this.messagesuccess="";
         window.location.reload()
-      }, 2500);
-    
+      }, 3500);
+      }
     },()=>{
       this.messageerror="Aucun participant inscrit dans cette formation";
       setTimeout(() => {
         this.messageerror="";
-      }, 2500);
+      }, 3500);
     })
   }
 }

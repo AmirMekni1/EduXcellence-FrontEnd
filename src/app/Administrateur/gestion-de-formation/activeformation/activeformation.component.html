@@ -1,10 +1,10 @@
-<h2 mat-dialog-title style="margin: 0px auto;">Modifier une formation</h2>
+<h2 mat-dialog-title style="margin: 0px auto;">Activer une formation</h2>
 <mat-dialog-content class="mat-typography">
   <form class="example-form" style="display: block;">
     <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
     <mat-form-field class="example-full-width" style="width: 500px; border-radius: 50%; display: block; margin: 0 auto;">
       <mat-label>Entrer Nom De theme</mat-label>
-      <input type="text" matInput [formControl]="inputFormControl1" [errorStateMatcher]="matcher" [(ngModel)]="themedeformation"
+      <input type="text" matInput disabled [(ngModel)]="themedeformation"
              name="themedeformation" placeholder="xx-xxx-xxx">
     </mat-form-field>
     <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------->

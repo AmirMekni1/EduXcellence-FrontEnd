@@ -27,14 +27,14 @@ connexion() {
     this.messagealert = "Email Obligatoire"
     setTimeout(() => {
       this.messagealert = ""
-    }, 2500);
+    }, 3500);
     return;
   }
   if (this.motdepasse==''){
     this.messagealert = "Mot De Passe"
     setTimeout(() => {
       this.messagealert = ""
-    }, 2500);
+    }, 3500);
     return;
   }
    let formdata = new FormData();
@@ -46,17 +46,17 @@ connexion() {
     this.messagesuccess = response.Message;
     setTimeout(() => {
     this.router.navigate(['/']);
-    }, 2500);
+    }, 3500);
     console.log(response.Message)
     localStorage.setItem("token",response.Token);
   }else{
     this.messageerror = response.Message;
     setTimeout(() => {
       this.messageerror = "";
-    }, 2500);
+    }, 3500);
     setTimeout(() => {
       this.messageerror = "";
-    }, 2500);
+    }, 3500);
   }
   })}
 }

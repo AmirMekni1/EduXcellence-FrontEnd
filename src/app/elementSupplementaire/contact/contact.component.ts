@@ -8,11 +8,18 @@ import { ServiceParticipantService } from '../../Participant/Service-participant
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent implements OnInit {
+closeAlert() {
+throw new Error('Method not implemented.');
+}
 
 Contenu: any;
 Sujet: any;
 Email: any;
   token: any;
+  email: any;
+  messagealert: any;
+messagesuccess: any;
+messageerror: any;
 
 
 constructor(private _service:ErviceelementsupplementaireService,private _serviceparticipant:ServiceParticipantService){}
@@ -25,42 +32,38 @@ constructor(private _service:ErviceelementsupplementaireService,private _service
 })
 
   }
+  isValidEmail(email: string): boolean {
+    return /\S+@\S+\.\S+/.test(email);
+  }
 
 Envoyer() {
-  if (this.token){
+  
+  
     if (!this.Sujet){
-      alert("Veuillez remplir le champ de sujet");
-    }else if(!this.Contenu){
-      alert("Veuillez remplir le champ de contenu");
+      this.messagealert="Veuillez remplir le champ de sujet";
+      setTimeout(() => {
+        this.messagealert=null;
+      }, 3500);
+    }
+    if(!this.Contenu){
+      this.messagealert="Veuillez remplir le champ de contenu"
+      setTimeout(() => {
+        this.messagealert=null
+      }, 3500);
     }else{
       let formdata = new FormData()
       formdata.append('Contenu', this.Contenu);
       formdata.append('Sujet', this.Sujet);
-      formdata.append('from', this.Email);
       this._service.contactAdmin(formdata).subscribe(()=>{
-        alert("Message envoyé avec succès");
+       this.messagesuccess="Message envoyé avec succès"
+       setTimeout(() => {
+        this.messagesuccess=null
+      }, 3500);
       })
     }
-  }else{
-    if (!this.Email){
-      alert("Veuillez remplir le champ de sujet");
-    }else if(!this.Sujet){
-      alert("Veuillez remplir le champ de contenu");
-    }else if(!this.Contenu){
-
-    }else{
-      let formdata = new FormData()
-      formdata.append('Contenu', this.Contenu);
-      formdata.append('Sujet', this.Sujet);
-      formdata.append('from', this.Email);
-      this._service.contactAdmin(formdata).subscribe(()=>{
-        alert("Message envoyé avec succès");
-      })
-    }
-
-  }
-    
+ 
 }
 
 
 }
+

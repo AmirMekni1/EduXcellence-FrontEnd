@@ -102,12 +102,12 @@ messageerror: any;
         setTimeout(() => {
           this.messagesuccess=""
           window.location.reload();
-        }, 2500);
+        }, 3500);
   }else{
     this.messageerror=response.Message
     setTimeout(() => {
       this.messageerror=""
-      }, 2500);
+      }, 3500);
   }
 })}
 
@@ -128,12 +128,12 @@ DesactiverCompteFormateur(id:any){
       setTimeout(() => {
         this.messagesuccess=""
         window.location.reload();
-      }, 2500);
+      }, 3500);
 }else{
   this.messageerror=response.Message
   setTimeout(() => {
     this.messageerror=""
-    }, 2500);
+    }, 3500);
 }})}
 
 }

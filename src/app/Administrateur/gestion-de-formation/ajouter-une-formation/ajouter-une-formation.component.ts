@@ -38,42 +38,42 @@ AjouterUneNouvelleFormation(){
     this.messagealert = "Theme De Formation Obligatoire";
     setTimeout(() => {
       this.messagealert = "";
-    }, 2500);
+    }, 3500);
     return;
   }
   if (!this.Description){
     this.messagealert = "Description Obligatoire";
     setTimeout(() => {
       this.messagealert = "";
-    }, 2500);
+    }, 3500);
     return;
   }
   if (!this.Prix){
     this.messagealert = "Prix Obligatoire";
     setTimeout(() => {
       this.messagealert = "";
-    }, 2500);
+    }, 3500);
     return;
   }
   if (!this.validatePrix(this.Prix)){
     this.messagealert = "Prix doit contient des chiffre";
     setTimeout(() => {
       this.messagealert = "";
-    }, 2500);
+    }, 3500);
     return;
   }
   if (!this.datedebut){
     this.messagealert = "Date Debut Obligatoire";
     setTimeout(() => {
       this.messagealert = "";
-    }, 2500);
+    }, 3500);
     return;
   }
   if (!this.datefin){
     this.messagealert = "Date Fin Obligatoire";
     setTimeout(() => {
       this.messagealert = "";
-    }, 2500);
+    }, 3500);
     return;
   }  
   let formdata = new FormData();
@@ -93,22 +93,22 @@ AjouterUneNouvelleFormation(){
       this.messageerror=response.Message;
       setTimeout(() => {
         this.messageerror="";
-      }, 2500);
+      }, 3500);
     }else if(response.Message=="La date de fin de la formation doit être après la date de début") {
       this.messageerror=response.Message;
       setTimeout(() => {
         this.messageerror="";
-      }, 2500);
+      }, 3500);
     }else if(response.Message=="La date de début de la formation doit être aujourd'hui ou après") {
       this.messageerror=response.Message;
       setTimeout(() => {
         this.messageerror="";
-      }, 2500);
+      }, 3500);
     }else{
       this.messageerror=response.Message;
       setTimeout(() => {
         this.messageerror="";
-      }, 2500);
+      }, 3500);
     }
   })
 }

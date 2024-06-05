@@ -73,7 +73,9 @@ getFileFormation(cour: any) {
 }
 
 downloadPdf(): void {
- this._serviceparticipant.downloadAttestation(this._serviceparticipant.SetIDF,this.participantid).subscribe(response => {
+ this._serviceparticipant.downloadAttestation(this._serviceparticipant.getIDF(),this.participantid).subscribe(response => {
+  console.log("this._serviceparticipant.getIDF() ",this._serviceparticipant.getIDF())
+  console.log("this.participantid) ",this.participantid)
     const blob = new Blob([response], { type: 'application/pdf' });
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement('a');

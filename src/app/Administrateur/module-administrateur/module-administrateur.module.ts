@@ -37,7 +37,6 @@ import { ModifierFormateurComponent } from '../gestion-de-formateurs/modifier-fo
 
 import { FileUploadModule } from 'primeng/fileupload';
 import { MatSelectModule } from '@angular/material/select';
-import { EvaluationComponent } from '../gestion-de-formation/evaluation/evaluation.component';
 
 import {MatExpansionModule} from '@angular/material/expansion';
 import { ConsulterLesInscriptionsComponent } from '../gestion-de-inscription/consulter-les-inscriptions/consulter-les-inscriptions.component';
@@ -51,6 +50,7 @@ import { SkeletonModule } from 'primeng/skeleton';//taille width heigth
 
 import { DatePipe } from '@angular/common';
 import { MesformationsComponent } from '../gestion-de-formation/mesformations/mesformations.component';
+import { ActiveformationComponent } from '../gestion-de-formation/activeformation/activeformation.component';
 @NgModule({
   declarations: [
     AjouterUneFormationComponent,
@@ -64,10 +64,11 @@ import { MesformationsComponent } from '../gestion-de-formation/mesformations/me
     ModifierFormateurComponent,
     ModifierParticipantComponent,
     GestionDePayementComponent,
-    EvaluationComponent,
     ConsulterLesInscriptionsComponent,
     PlanificationDeFormationComponent,
-    MesformationsComponent
+    MesformationsComponent,
+    ActiveformationComponent,
+
     
   ],
   imports: [

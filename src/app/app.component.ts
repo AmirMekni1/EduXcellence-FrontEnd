@@ -12,7 +12,7 @@ import { filter } from 'rxjs/operators';
 })
 export class AppComponent implements OnInit {
   title = 'EduXcellence';
-Schema: any;
+  isAuthentifier: any;
   token: any;
   id: any;
   user: any;
@@ -21,6 +21,14 @@ Schema: any;
   constructor(private router: Router, private _service:ServiceAuthentificationService,private _serviceParticipant:ServiceParticipantService ) {
     }
   ngOnInit(): void {
+
+      this._service.isAuthentifier(localStorage.getItem("token")).subscribe((data:any)=>{
+        this.isAuthentifier=data;
+        if (data==false){
+          this.isAuthentifier=true
+          this.router.navigate(['/']);
+        }
+      })
 
     this.router.events.pipe(
       filter((event): event is NavigationEnd => event instanceof NavigationEnd)

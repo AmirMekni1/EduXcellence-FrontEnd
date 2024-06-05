@@ -70,7 +70,6 @@ console.log(this.user)
   
 }
 onRouteChange(): void {
-  console.log('Route changed, reload the component logic here.');
   this.reloadComponent();
 }
 

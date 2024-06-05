@@ -32,14 +32,14 @@ if (this.Matricule==""){
   this.messagealert="Email Obligatoire"
   setTimeout(() => {
     this.messagealert = ""
-  }, 2500);
+  }, 3500);
   return;
 }
 if (this.motdepasse==""){
   this.messagealert = "Mot de passe Obligatoire"
   setTimeout(() => {
     this.messagealert = ""
-    }, 2500);
+    }, 3500);
     return;
     }
 
@@ -54,20 +54,20 @@ if (this.motdepasse==""){
             setTimeout(() => {
               this.messagesuccess = ""
               this.router.navigate(['/']);
-              }, 2500);
+              }, 3500);
               localStorage.setItem("token",data.Token)
             }else{
               this.messageerror = data.Message
               setTimeout(() => {
                 this.messageerror = ""
-                }, 2500);
+                }, 3500);
             }
               },
               error => {
                 this.messageerror = "Email ou mot de passe incorrect"
                 setTimeout(() => {
                   this.messageerror = ""
-                  }, 2500);
+                  }, 3500);
                   }
                   );
                   

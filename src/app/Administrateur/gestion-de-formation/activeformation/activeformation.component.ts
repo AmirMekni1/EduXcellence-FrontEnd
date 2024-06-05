@@ -1,18 +1,18 @@
-import { Component } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
-import { MyErrorStateMatcher } from '../../gestion-de-formateurs/modifier-formateur/modifier-formateur.component';
-import { ServiceAdministrateurService } from '../../Service-administrateur/service-administrateur.service';
-import { MatDialogRef } from '@angular/material/dialog';
 import { DatePipe } from '@angular/common';
+import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { MatDialogRef } from '@angular/material/dialog';
+import { ServiceAdministrateurService } from '../../Service-administrateur/service-administrateur.service';
+import { MyErrorStateMatcher } from '../../gestion-de-formateurs/modifier-formateur/modifier-formateur.component';
+import { ModifierUneFormationComponent } from '../modifier-une-formation/modifier-une-formation.component';
 
 @Component({
-  selector: 'app-modifier-une-formation',
-  templateUrl: './modifier-une-formation.component.html',
-  styleUrl: './modifier-une-formation.component.css'
+  selector: 'app-activeformation',
+  templateUrl: './activeformation.component.html',
+  styleUrl: './activeformation.component.scss'
 })
-export class ModifierUneFormationComponent {
-
-  
+export class ActiveformationComponent {
+ 
   hide = true;
 
   
@@ -108,7 +108,7 @@ export class ModifierUneFormationComponent {
     };
     this._service.ModifierUneFormation(formdata,localStorage.getItem('token'),this._service.getIDF()).subscribe((response:any)=>{
       if (response.Message =="Mise à jour avec succès"){
-        this.messagesuccess= response.Message;
+        this.ActiverFormation()
         setTimeout(()=>{
           this.messagesuccess="";
           window.location.reload();
@@ -131,7 +131,25 @@ export class ModifierUneFormationComponent {
       }
     })
   }
-
+  ActiverFormation(){
+    let verif = confirm('voulez vous activer formation')
+    if (verif){
+    let formdata = new FormData()
+    formdata.append('id',this._service.getIDF())
+    this._service.ActiverFormation(localStorage.getItem('token'),formdata).subscribe((response: any) => {
+      if(response.Message){
+        this.messagesuccess=response.Message
+        setTimeout(() => {
+          this.messagesuccess=""
+          window.location.reload();
+        }, 3500);
+  }else{
+    this.messageerror=response.Message
+    setTimeout(() => {
+      this.messageerror=""
+      }, 3500);
+  }
+})}}
 
   
   validatePrix(Prix: string): boolean {
