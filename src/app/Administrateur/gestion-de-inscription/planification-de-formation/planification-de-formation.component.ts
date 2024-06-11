@@ -50,7 +50,12 @@ messageerror: any;
         setTimeout(() => {
           this.messageerror="";
         }, 3500);
-      }else{
+      }else if (data.Message="Aucun participant inscrit dans cette formation"){
+        this.messageerror=data.Message
+        setTimeout(() => {
+          this.messageerror="";
+        }, 3500);
+      } else{
       this.messagesuccess=data.Message;
       setTimeout(() => {
         this.messagesuccess="";
@@ -58,10 +63,7 @@ messageerror: any;
       }, 3500);
       }
     },()=>{
-      this.messageerror="Aucun participant inscrit dans cette formation";
-      setTimeout(() => {
-        this.messageerror="";
-      }, 3500);
+    
     })
   }
 }

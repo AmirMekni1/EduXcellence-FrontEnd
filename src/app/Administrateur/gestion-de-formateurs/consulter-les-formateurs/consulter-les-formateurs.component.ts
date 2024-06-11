@@ -94,6 +94,8 @@ messageerror: any;
     }
     
   ActiverCompteFormateur(id:any){
+    let verif = confirm("voulez vous activer compte")
+    if (verif){
     let formdata = new FormData();
     formdata.append("id",id)
     this._service.ActiverCompteFormateur(localStorage.getItem('token'),formdata).subscribe((response: any) => {
@@ -109,17 +111,21 @@ messageerror: any;
       this.messageerror=""
       }, 3500);
   }
-})}
+})}}
 
 Reassignation(x:any){
+  let verif = confirm("voulez vous Réassigner formateur")
+  if (verif){
   let formdata = new FormData();
   formdata.append("id",x)
   this._service.Reassignation(localStorage.getItem("token"),formdata).subscribe((data:any)=>{
     window.location.reload()
   })
-}
+}}
 
 DesactiverCompteFormateur(id:any){
+  let verif = confirm("voulez vous désactiver compte")
+  if (verif){
   let formdata = new FormData();
   formdata.append("id",id)
   this._service.DesactiverCompteFormateur(localStorage.getItem('token'),formdata).subscribe((response: any) => {
@@ -134,6 +140,6 @@ DesactiverCompteFormateur(id:any){
   setTimeout(() => {
     this.messageerror=""
     }, 3500);
-}})}
+}})}}
 
 }
